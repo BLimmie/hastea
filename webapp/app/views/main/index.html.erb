@@ -12,7 +12,7 @@
           <div class="card-body container">
             <div class="row  ">
               <div class="col-4 no-gutters align-items-center">
-                <%if File.exist?("./public/uploads/users/#{@run.runner_id}/user_avatar.png") %>
+                <%if File.exist?("./public/uploads/users/#{run.runner_id}/user_avatar.png") %>
                 <img class="img-thumbnail"  src="../uploads/users/<%= run.runner_id %>/user_avatar.png">
                 <%else %>
                 <img class="img-thumbnail" src="/img/avatar_placeholder.png">
@@ -58,13 +58,21 @@
                 </button>
               </div>
               <div class="modal-body">
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#orderFormContainer" aria-expanded="false" aria-controls="orderFormContainer">
                   Button
                 </button>
-                <div class="collapse" id="collapseExample">
+                <div class="collapse" id="orderFormContrainer">
                   <div class="card card-body">
-                    ...
-                    <button type="button" class="btn btn-primary">Submit Order</button>
+                    <div class="container">
+                      <div class="form-row">
+                        <label class="col-4">Order:</label>
+                      </div>
+                      <div class="form-row">
+                        <input name="order_desc" type="text" class="col-4"></input>
+                      </div>
+
+                      <button type="button" class="btn btn-primary">Submit Order</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -95,14 +103,14 @@
           <div class="card-body container">
             <div class="row align-items-center">
               <div class="col-4 no-gutters align-items-center">
-                <img src=User.where(id: Run.where(id: order.run_id).runner_id).filename alt="..." class="img-thumbnail">
+                <img src=User.where(id: Run[order.run_id]runner_id).filename alt="..." class="img-thumbnail">
               </div>
               <div class="col-7">
                 <div class="row">
-                  <h5 class="card_title text-center"><%= get_business_name Run.where(id: order.run_id).business_id %></h5>
+                  <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].business_id %></h5>
                   <div class="row">
                     <div class="col-5">
-                      <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+                      <p class="card-text">Run[id: order.run_id].bussiness_id</p>
                     </div>
                     <div class="col-5">
                       <p class="card-text">order.cost</p>
@@ -118,7 +126,7 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run.where(id: order.run_id).business_id + "delivery" %></h5>
+                <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run[order.run_id].business_id.to_s + "delivery" %></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
