@@ -1,5 +1,14 @@
 Sequel.migration do
   change do
+    create_table(:orders) do
+      primary_key :id, :type=>"int(11)"
+      column :runner_id, "int(11)"
+      column :user_id, "int(11)"
+      column :order_desc, "text"
+      column :status, "int(11)"
+      column :cost, "int(11)"
+    end
+    
     create_table(:runs) do
       primary_key :id, :type=>"int(11)"
       column :runner_id, "int(11)", :null=>false
@@ -41,5 +50,6 @@ end
                 change do
                   self << "INSERT INTO `schema_migrations` (`filename`) VALUES ('20190112070001_create_users.rb')"
 self << "INSERT INTO `schema_migrations` (`filename`) VALUES ('20190112072930_create_runs.rb')"
+self << "INSERT INTO `schema_migrations` (`filename`) VALUES ('20190112113003_create_orders.rb')"
                 end
               end

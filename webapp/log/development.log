@@ -12903,3 +12903,250 @@ puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
   [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSET NAMES utf8[0m
   [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET @@wait_timeout = 2147483
   [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+Started GET "/index" for 127.0.0.1 at 2019-01-12 03:35:34 -0800
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  DESCRIBE `runs`
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT version()[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  DESCRIBE `users`
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mDESCRIBE `orders`[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `orders` LIMIT 1
+  
+Sequel::DatabaseError (Mysql2::Error: Table 'bobarun_development.orders' doesn't exist):
+  
+app/models/order.rb:1:in `<main>'
+app/models.rb:7:in `<main>'
+app/controllers/main_controller.rb:1:in `<main>'
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SET NAMES utf8
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSET @@wait_timeout = 2147483[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET SQL_AUTO_IS_NULL=0
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT version()[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT NULL AS `nil` FROM `schema_migrations` LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `schema_migrations` LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT `filename` FROM `schema_migrations` ORDER BY `filename`
+  [1m[36mSequel::Mysql2::Database (56.0ms)[0m  [1mCREATE TABLE `orders` (`id` integer PRIMARY KEY AUTO_INCREMENT, `runner_id` integer, `user_id` integer, `order_desc` Text, `status` integer, `cost` integer)[0m
+  [1m[35mSequel::Mysql2::Database (4.7ms)[0m  INSERT INTO `schema_migrations` (`filename`) VALUES ('20190112113003_create_orders.rb')
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSHOW FULL TABLES[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT version()
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'orders') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'runs') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'schema_migrations') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'users') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mDESCRIBE `orders`[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SHOW INDEX FROM `orders`
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'orders') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  DESCRIBE `runs`
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSHOW INDEX FROM `runs`[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'runs') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mDESCRIBE `schema_migrations`[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SHOW INDEX FROM `schema_migrations`
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'schema_migrations') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  DESCRIBE `users`
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSHOW INDEX FROM `users`[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'users') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT NULL AS `nil` FROM `schema_migrations` LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `schema_migrations` LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT `filename` FROM `schema_migrations` ORDER BY `filename`[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `schema_migrations`
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+Started GET "/index" for 127.0.0.1 at 2019-01-12 03:35:45 -0800
+  [1m[35mSequel::Mysql2::Database (1.0ms)[0m  DESCRIBE `runs`
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT version()[0m
+  [1m[35mSequel::Mysql2::Database (1.0ms)[0m  DESCRIBE `users`
+  [1m[36mSequel::Mysql2::Database (0.9ms)[0m  [1mDESCRIBE `orders`[0m
+Processing by MainController#index as HTML
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 167ms (Views: 158.1ms | Models: 0.4ms)
+
+
+Started GET "/bootstrap/js/popper.min.js.map" for 127.0.0.1 at 2019-01-12 03:35:46 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/popper.min.js.map"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-12 03:35:47 -0800
+Started GET "/index" for 127.0.0.1 at 2019-01-12 03:35:47 -0800
+Processing by MainController#index as HTML
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 14ms (Views: 12.2ms | Models: 0.4ms)
+
+
+Started GET "/bootstrap/js/popper.min.js.map" for 127.0.0.1 at 2019-01-12 03:35:47 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/popper.min.js.map"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-12 03:35:48 -0800
+Started GET "/index" for 127.0.0.1 at 2019-01-12 03:35:48 -0800
+Processing by MainController#index as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 15ms (Views: 13.1ms | Models: 0.3ms)
+
+
+Started GET "/bootstrap/js/popper.min.js.map" for 127.0.0.1 at 2019-01-12 03:35:48 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/popper.min.js.map"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/user/preferences" for 127.0.0.1 at 2019-01-12 03:35:49 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/user/preferences"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-12 03:35:50 -0800
+Started GET "/index" for 127.0.0.1 at 2019-01-12 03:35:50 -0800
+Processing by MainController#index as HTML
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 15ms (Views: 13.4ms | Models: 0.3ms)
+
+
+Started GET "/bootstrap/js/popper.min.js.map" for 127.0.0.1 at 2019-01-12 03:35:51 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/popper.min.js.map"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
