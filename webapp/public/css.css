@@ -1,6 +1,4 @@
-/* .alert {
-  margin-top: 80px;
-} */
+
 .bg-full {
   position: absolute;
   top: 0;
@@ -13,6 +11,7 @@
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
+  z-index:-1
 }
 
 .bg-login {

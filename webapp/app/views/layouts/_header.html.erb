@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Name TBD</title>
+  <title>HasTea</title>
   <link rel="shortcut icon" href="/img/favicon.png">
   <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
   <link href="/css.css" rel="stylesheet">
@@ -14,9 +14,10 @@
   <script src="/bootstrap/js/bootstrap.min.js"></script>
  <body>
   <header>
+    <% if @user %>
       <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top bg-dark">
         <div class="container">
-          <a class="navbar-brand" href="/">NAME TBD</a>
+          <a class="navbar-brand" href="/">HasTea</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -32,7 +33,7 @@
               </ul>
               <ul class="navbar-nav float-right ml-auto">
                 <li class="nav-item dropdown float-right">
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="mr-1 fas fa-user"></i>NAME PLACHOLDER</a>
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="mr-1 fas fa-user"></i><%= @user.first_name %> <%= @user.last_name %></a>
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="/user/preferences"><i class="mr-1 fas fa-cog"></i>User Preferences</a>
                     <a class="dropdown-item" href="/logout"><i class="mr-1 fas fa-sign-out-alt"></i>Logout</a>
@@ -44,4 +45,6 @@
 
       </div>
       </nav>
+      <% end %>
+
   </header>

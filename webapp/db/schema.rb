@@ -20,13 +20,17 @@ Sequel.migration do
     
     create_table(:users) do
       primary_key :id, :type=>"int(11)"
-      column :phone_number, "int(11)", :null=>false
+      column :phone_number, "varchar(255)", :null=>false
       column :email, "varchar(255)", :null=>false
       column :is_verified, "int(11)", :null=>false
-      column :name, "varchar(255)", :null=>false
+      column :first_name, "varchar(255)", :null=>false
+      column :last_name, "varchar(255)", :null=>false
+      column :activation_code, "int(11)", :null=>false
       column :credits, "int(11)", :null=>false
       column :rating_score, "int(11)", :null=>false
       column :rating_count, "int(11)", :null=>false
+      column :password, "varchar(255)", :null=>false
+      column :salt, "varchar(255)", :null=>false
       
       index [:email], :name=>:email, :unique=>true
       index [:phone_number], :name=>:phone_number, :unique=>true

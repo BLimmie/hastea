@@ -3,6 +3,11 @@
     <a class="close" data-dismiss="alert" href="#">×</a><%= @alert %>
   </div>
 <% end %>
+<% if @notice %>
+  <div class="alert alert-info">
+    <a class="close" data-dismiss="alert" href="#">×</a><%= @notice %>
+  </div>
+<% end %>
 <div class="bg-full bg-login">
   <div class="container text-center text-light">
     <form class="form-signin" action="?redirect=<%= @redirect %>" method="POST" accept-charset="UTF-8">
@@ -11,8 +16,11 @@
       <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email Address" required autofocus>
       <label for="inputPassword" class="sr-only">Password</label>
       <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
       <button class="btn btn-lg btn-primary btn-block form-submit" type="submit">Sign In</button>
       <button class="btn btn-lg btn-primary btn-block" onclick="location.href='/register'">Register</button>
+
     </form>
   </div>
 </div>
