@@ -1,0 +1,89 @@
+<div class="container nav-sep">
+  <h2>Start a Run</h2><hr>
+  <div class = "container col-6 float-left">
+    Maps go here
+  </div>
+  <div class = "container col-6 float-right">
+  <form action="/runs" method="POST">
+    <div class="form-row">
+      <div class="col-6">
+        <label class="float-left">Delivery Method</label>
+      </div>
+      <div class="col-4">
+        <label class="float-left">Max Orders</label>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-6">
+        <select class="form-control" name="delivery_method">
+          <option value="pickup" selected>Pick Up</option>
+          <option value="delivery">Delivery</option>
+        </select>
+      </div>
+      <div class="col-4">
+        <input type="number" class="form-control" name="max_orders" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-6">
+        <label class="float-left">Delivery Date</label>
+      </div>
+      <div class="col-6">
+        <label class="float-left">Delivery Time</label>
+      </div>
+    </div>
+    <div class="form-row">
+        <div class="col-6">
+            <div class="form-group">
+                <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
+                    <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker({
+                  format: 'L'
+
+                });
+            });
+        </script>
+        <div class="col-6">
+            <div class="form-group">
+                <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker2"/>
+                    <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-clock"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker2').datetimepicker({
+                  format: 'LT'
+
+                });
+            });
+        </script>
+
+    </div>
+    <div class="form-row">
+    <div class="col-12">
+      <label class="float-left">Notes</label>
+    </div>
+    <div class="col-12">
+      <textarea class="form-control" style="width: 100%;" name="notes" rows="4"></textarea>
+    </div>
+  </div>
+    <div class="form-row">
+      <div class="col-1">
+        <label class="float-left mt-1">
+          <input type="submit" class="btn btn-success btn-medium" value="Create Run">
+        </label>
+  </form>
+</div>
+</div>

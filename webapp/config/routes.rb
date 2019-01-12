@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'logout' => 'main#logout'
   get 'user/preferences' => "main#user_edit"
   post 'user/preferences' => 'main#user_edit_post'
+  get 'runs/new' => "main#new_run"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
