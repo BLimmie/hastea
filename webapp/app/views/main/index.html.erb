@@ -29,7 +29,7 @@
                         <h5 class="mb-3 ml-5"><%= Order.where(run_id: run.id).count.to_s + '/' + run.order_cap.to_s %></h5>
                       </div>
                       <div class="row ml-5 ">
-                        <h6 class="card-subutitle mb-1 text-muted "><%= '%02d' % (run.datetime - Time.now).hour %></h6>
+                        <h6 class="card-subutitle mb-1 text-muted "><%= '%02d' % ((run.datetime - Time.now)/60/60) %></h6>
                       </div>
 
                       <div class="row">
