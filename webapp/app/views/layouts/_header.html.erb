@@ -35,7 +35,15 @@
               </ul>
               <ul class="navbar-nav float-right ml-auto">
                 <li class="nav-item dropdown float-right">
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="mr-1 fas fa-user"></i><%= @user.first_name %> <%= @user.last_name %></a>
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <%if File.exist?("./public/uploads/users/#{@user.id}/user_avatar.png") %>
+                      <img class="rounded" style="width:25px;height:25px;" src="../uploads/users/<%= @user.id %>/user_avatar.png">
+                    <%else %>
+                      <i class="mr-1 fas fa-user"></i>
+                    <%end %>
+
+
+                  <%= @user.first_name %> <%= @user.last_name %></a>
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="/user/preferences"><i class="mr-1 fas fa-cog"></i>User Preferences</a>
                     <a class="dropdown-item" href="/logout"><i class="mr-1 fas fa-sign-out-alt"></i>Logout</a>

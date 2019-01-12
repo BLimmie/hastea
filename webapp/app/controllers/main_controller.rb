@@ -26,16 +26,20 @@ class MainController < ApplicationController
     redirect_to "/login"
   end
   def user_edit
+    p Rails.root
   end
   def user_edit_post
+    p Rails.root.to_s
+
+    p params
     if params[:avatar]
       p params[:avatar]
-      file = params[:user[avatar]]
+      file = params[:avatar]
       # Create directories if they do not exist already
-      Dir.mkdir("./uploads/users/#{@user.id}") unless Dir.exist?("./uploads/users/#{@user.id}")
-      # Dir.mkdir("./uploads/users/#{@user.id}/avatar") unless Dir.exist?("./uploads/users/#{@user.id}/avatar")
-      File.delete("./uploads/users/#{@user.id}/user_avatar.png") if File.exist?("./uploads/users/#{@user.id}/user_avatar.png")
-      File.open("./uploads/users/#{@user.id}/user_avatar.png", 'wb') do |f|
+      Dir.mkdir("./public/uploads/users/#{@user.id}") unless Dir.exist?("./public/uploads/users/#{@user.id}")
+      # Dir.mkdir("./public/uploads/users/#{@user.id}/avatar") unless Dir.exist?("./public/uploads/users/#{@user.id}/avatar")
+      File.delete("./public/uploads/users/#{@user.id}/user_avatar.png") if File.exist?("./public/uploads/users/#{@user.id}/user_avatar.png")
+      File.open("./public/uploads/users/#{@user.id}/user_avatar.png", 'wb') do |f|
         f.write(file.read)
       end
     end
