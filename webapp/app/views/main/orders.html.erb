@@ -30,7 +30,8 @@
                             <p class="card-text">Run[order.run_id].business_id</p>
                           </div>
                           <div class="col-5">
-                            <p class="card-text">order.cost</p>
+                            <p class="card-text">$<%=order.cost/100%>
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -54,7 +55,7 @@
                           order.order_desc
                         </div>
                         <div class="col-4">
-                          order.cost
+                          $<%=order.cost/100%>
                         </div>
                       </div>
                     </div>
@@ -87,7 +88,9 @@
                             <p class="card-text">Run[order.run_id].business_id</p>
                           </div>
                           <div class="col-5">
-                            <p class="card-text">order.cost</p>
+                            <p class="card-text">
+                               $<%=order.cost/100%>
+                             </p>
                           </div>
                         </div>
                       </div>
@@ -110,7 +113,7 @@
                           order.order_desc
                         </div>
                         <div class="col-4">
-                          order.cost
+                          $<%=order.cost/100%>
                         </div>
                       </div>
                     </div>
