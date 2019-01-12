@@ -28629,3 +28629,2803 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/index" for 127.0.0.1 at 2019-01-12 11:27:43 -0800
+Processing by MainController#index as HTML
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/index.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT count(*) AS `count` FROM `runs` WHERE (`status` = 1) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 1) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  Rendered main/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 26ms (Views: 21.1ms | Models: 1.9ms)
+
+
+Started GET "/download.png" for 127.0.0.1 at 2019-01-12 11:27:43 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/download.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/index" for 127.0.0.1 at 2019-01-12 11:29:12 -0800
+Processing by MainController#index as HTML
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT count(*) AS `count` FROM `runs` WHERE (`status` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `runs` WHERE (`status` = 1) LIMIT 4
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  Rendered main/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 57ms (Views: 51.3ms | Models: 2.7ms)
+
+
+Started GET "/download.png" for 127.0.0.1 at 2019-01-12 11:29:12 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/download.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/user/preferences" for 127.0.0.1 at 2019-01-12 11:36:09 -0800
+Processing by MainController#user_edit as HTML
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/user_edit.html.erb within layouts/application
+  Rendered main/user_edit.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 28ms (Views: 25.4ms | Models: 0.4ms)
+
+
+Started GET "/user/download.png" for 127.0.0.1 at 2019-01-12 11:36:10 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/user/download.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/user/preferences" for 127.0.0.1 at 2019-01-12 11:36:15 -0800
+Processing by MainController#user_edit_post as HTML
+  Parameters: {"first_name"=>"Cole", "last_name"=>"Brinsfield", "email"=>"brinsfield.cole@gmail.com", "phone_number"=>"6504688601", "password"=>"[FILTERED]", "password2"=>"[FILTERED]", "authenticity_token"=>"4mREgUQ4olmR9RgqReTlIJGpbKhpvHXRfzPC9m0xy/tAcuvLq+lf1I3O7Vgv/Mj8zlVUwQ48ZzP+UkDcdMzJdQ=="}
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+Redirected to http://localhost:3000/user/preferences
+Completed 302 Found in 1ms (Models: 0.2ms)
+
+
+Started GET "/user/preferences" for 127.0.0.1 at 2019-01-12 11:36:15 -0800
+Processing by MainController#user_edit as HTML
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/user_edit.html.erb within layouts/application
+  Rendered main/user_edit.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 13ms (Views: 12.4ms | Models: 0.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-01-12 11:39:03 -0800
+Processing by MainController#logout as HTML
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (Models: 0.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-01-12 11:39:03 -0800
+Processing by MainController#login as HTML
+  Rendering main/login.html.erb within layouts/application
+  Rendered main/login.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 17ms (Views: 16.2ms | Models: 0.0ms)
+
+
+Started POST "/login?redirect=/" for 127.0.0.1 at 2019-01-12 11:46:28 -0800
+Processing by MainController#login_post as HTML
+  Parameters: {"email"=>"brinsfield.cole@gmail.com", "password"=>"[FILTERED]", "authenticity_token"=>"OGgIUg8sY6sUiRyHGcUcqQOaZhexSfl7w2KK5EYwqLiafqcY4P2eJgiy6fVz3TF1XGZeftbJ65lCAwjOX82qNg==", "redirect"=>"/"}
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `users` WHERE (`email` = 'brinsfield.cole@gmail.com') LIMIT 1[0m
+Redirected to http://localhost:3000/login?failed=1
+Completed 302 Found in 6ms (Models: 0.7ms)
+
+
+Started GET "/login?failed=1" for 127.0.0.1 at 2019-01-12 11:46:28 -0800
+Processing by MainController#login as HTML
+  Parameters: {"failed"=>"1"}
+  Rendering main/login.html.erb within layouts/application
+  Rendered main/login.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 21ms (Views: 19.3ms | Models: 0.0ms)
+
+
+Started POST "/login?redirect=/" for 127.0.0.1 at 2019-01-12 11:46:34 -0800
+Processing by MainController#login_post as HTML
+  Parameters: {"email"=>"brinsfield.cole@gmail.com", "password"=>"[FILTERED]", "authenticity_token"=>"WXZW06nDZ5aeFo9KacnXwu3FWo8sUxlK6C0I+y4GJf77YPmZRhKaG4ItejgD0foesjli5kvTC6hpTIrRN/sncA==", "redirect"=>"/"}
+  [1m[35mSequel::Mysql2::Database (0.8ms)[0m  SELECT * FROM `users` WHERE (`email` = 'brinsfield.cole@gmail.com') LIMIT 1
+Redirected to http://localhost:3000/login?failed=1
+Completed 302 Found in 7ms (Models: 0.8ms)
+
+
+Started GET "/login?failed=1" for 127.0.0.1 at 2019-01-12 11:46:34 -0800
+Processing by MainController#login as HTML
+  Parameters: {"failed"=>"1"}
+  Rendering main/login.html.erb within layouts/application
+  Rendered main/login.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 27ms (Views: 24.6ms | Models: 0.0ms)
+
+
+Started POST "/login?redirect=/" for 127.0.0.1 at 2019-01-12 11:46:37 -0800
+Processing by MainController#login_post as HTML
+  Parameters: {"email"=>"brinsfield.cole@gmail.com", "password"=>"[FILTERED]", "authenticity_token"=>"jZjIQiMvgLGXGELX4b0VM9zSSkbuQxKf9dGV+RhnY3wvjmcIzP59PIsjt6WLpTjvgy5yL4nDAH10sBfTAZph8g==", "redirect"=>"/"}
+  [1m[36mSequel::Mysql2::Database (0.8ms)[0m  [1mSELECT * FROM `users` WHERE (`email` = 'brinsfield.cole@gmail.com') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (Models: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-12 11:46:37 -0800
+Started GET "/index" for 127.0.0.1 at 2019-01-12 11:46:37 -0800
+Processing by MainController#index as HTML
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT count(*) AS `count` FROM `runs` WHERE (`status` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE (`status` = 1) LIMIT 4
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  Rendered main/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 14ms (Views: 11.9ms | Models: 0.9ms)
+
+
+Started GET "/download.png" for 127.0.0.1 at 2019-01-12 11:46:37 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/download.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/bootstrap/js/popper.min.js.map" for 127.0.0.1 at 2019-01-12 11:47:03 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/popper.min.js.map"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/user/preferences" for 127.0.0.1 at 2019-01-12 12:04:55 -0800
+Processing by MainController#user_edit as HTML
+  [1m[36mSequel::Mysql2::Database (0.8ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/user_edit.html.erb within layouts/application
+  Rendered main/user_edit.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 32ms (Views: 28.1ms | Models: 0.8ms)
+
+
+Started GET "/user/download.png" for 127.0.0.1 at 2019-01-12 12:04:55 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/user/download.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/download.png" for 127.0.0.1 at 2019-01-12 12:04:57 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/download.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/index" for 127.0.0.1 at 2019-01-12 12:17:08 -0800
+Processing by MainController#index as HTML
+  [1m[35mSequel::Mysql2::Database (0.8ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT count(*) AS `count` FROM `runs` WHERE (`status` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `runs` WHERE (`status` = 1) LIMIT 4
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  Rendered main/index.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 31ms (Views: 25.3ms | Models: 2.3ms)
+
+
+Started GET "/uploads/users/1/user_avatar.png" for 127.0.0.1 at 2019-01-12 12:17:08 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/users/1/user_avatar.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/uploads/users/1/user_avatar.png" for 127.0.0.1 at 2019-01-12 12:17:11 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/users/1/user_avatar.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/index" for 127.0.0.1 at 2019-01-12 12:17:38 -0800
+Processing by MainController#index as HTML
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/index.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT count(*) AS `count` FROM `runs` WHERE (`status` = 1) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 1) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  Rendered main/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 34ms (Views: 28.8ms | Models: 2.9ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2019-01-12 12:32:52 -0800
+Processing by MainController#index as HTML
+  [1m[35mSequel::Mysql2::Database (0.8ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT count(*) AS `count` FROM `runs` WHERE (`status` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `runs` WHERE (`status` = 1) LIMIT 4
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  Rendered main/index.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 54ms (Views: 47.8ms | Models: 2.8ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2019-01-12 12:32:55 -0800
+Processing by MainController#index as HTML
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/index.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT count(*) AS `count` FROM `runs` WHERE (`status` = 1) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 1) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  Rendered main/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 23ms (Views: 21.3ms | Models: 0.8ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2019-01-12 12:32:59 -0800
+Processing by MainController#index as HTML
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT count(*) AS `count` FROM `runs` WHERE (`status` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `runs` WHERE (`status` = 1) LIMIT 4
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  Rendered main/index.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 32ms (Views: 26.0ms | Models: 2.6ms)
+
+
+Started GET "/user/preferences" for 127.0.0.1 at 2019-01-12 12:33:25 -0800
+Processing by MainController#user_edit as HTML
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/user_edit.html.erb within layouts/application
+  Rendered main/user_edit.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 16ms (Views: 14.8ms | Models: 0.3ms)
+
+
+Started POST "/user/preferences" for 127.0.0.1 at 2019-01-12 12:34:36 -0800
+Processing by MainController#user_edit_post as HTML
+  Parameters: {"first_name"=>"Cole", "last_name"=>"Brinsfield", "email"=>"brinsfield.cole@gmail.com", "phone_number"=>"6504688601", "password"=>"[FILTERED]", "password2"=>"[FILTERED]", "authenticity_token"=>"JhC8pfMBF0gg0aWnpnYnGF1qcPYIDvplj3QvnhnDVFKEBhPvHNDqxTzqUNXMbgrEApZIn2+O6IcOFa20AD5W3A==", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fb01cab8410 @tempfile=#<Tempfile:/tmp/RackMultipart20190112-17820-1vexkii.gif>, @original_filename="bughuh.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"avatar\"; filename=\"bughuh.gif\"\r\nContent-Type: image/gif\r\n">}
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+Redirected to http://localhost:3000/user/preferences
+Completed 302 Found in 5ms (Models: 0.7ms)
+
+
+Started GET "/user/preferences" for 127.0.0.1 at 2019-01-12 12:34:36 -0800
+Processing by MainController#user_edit as HTML
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/user_edit.html.erb within layouts/application
+  Rendered main/user_edit.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 35ms (Views: 30.3ms | Models: 0.7ms)
+
+
+Started POST "/user/preferences" for 127.0.0.1 at 2019-01-12 12:34:48 -0800
+Processing by MainController#user_edit_post as HTML
+  Parameters: {"first_name"=>"Cole", "last_name"=>"Brinsfield", "email"=>"brinsfield.cole@gmail.com", "phone_number"=>"6504688601", "password"=>"[FILTERED]", "password2"=>"[FILTERED]", "authenticity_token"=>"LolLlOi7d4G9Uo3Sx0k0d6GjPKPGiIg0Fodbd3e+eneMn+TeB2qKDKFpeKCtURmr/l8EyqEImtaX5tldbkN4+Q==", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fb011aa7300 @tempfile=#<Tempfile:/tmp/RackMultipart20190112-17820-noe4ax.gif>, @original_filename="bugpat.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"avatar\"; filename=\"bugpat.gif\"\r\nContent-Type: image/gif\r\n">}
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+Redirected to http://localhost:3000/user/preferences
+Completed 302 Found in 2ms (Models: 0.2ms)
+
+
+Started GET "/user/preferences" for 127.0.0.1 at 2019-01-12 12:34:48 -0800
+Processing by MainController#user_edit as HTML
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/user_edit.html.erb within layouts/application
+  Rendered main/user_edit.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 14ms (Views: 12.4ms | Models: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-12 12:34:52 -0800
+Started GET "/index" for 127.0.0.1 at 2019-01-12 12:34:52 -0800
+Processing by MainController#index as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT count(*) AS `count` FROM `runs` WHERE (`status` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE (`status` = 1) LIMIT 4
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  Rendered main/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 15ms (Views: 13.3ms | Models: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-12 12:34:53 -0800
+Started GET "/index" for 127.0.0.1 at 2019-01-12 12:34:53 -0800
+Processing by MainController#index as HTML
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/index.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT count(*) AS `count` FROM `runs` WHERE (`status` = 1) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 1) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  Rendered main/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 21ms (Views: 17.4ms | Models: 1.6ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2019-01-12 12:34:55 -0800
+Processing by MainController#index as HTML
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT count(*) AS `count` FROM `runs` WHERE (`status` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `runs` WHERE (`status` = 1) LIMIT 4
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  Rendered main/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 30ms (Views: 24.7ms | Models: 2.6ms)
+
+
+Started GET "/user/preferences" for 127.0.0.1 at 2019-01-12 12:36:37 -0800
+Processing by MainController#user_edit as HTML
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/user_edit.html.erb within layouts/application
+  Rendered main/user_edit.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 20ms (Views: 17.6ms | Models: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-12 12:37:00 -0800
+Started GET "/index" for 127.0.0.1 at 2019-01-12 12:37:01 -0800
+Processing by MainController#index as HTML
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT count(*) AS `count` FROM `runs` WHERE (`status` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `runs` WHERE (`status` = 1) LIMIT 4
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  Rendered main/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 25ms (Views: 20.6ms | Models: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-12 12:37:07 -0800
+Started GET "/index" for 127.0.0.1 at 2019-01-12 12:37:07 -0800
+Processing by MainController#index as HTML
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/index.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT count(*) AS `count` FROM `runs` WHERE (`status` = 1) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 1) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  Rendered main/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 56ms (Views: 50.5ms | Models: 2.8ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2019-01-12 12:39:00 -0800
+Processing by MainController#index as HTML
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT count(*) AS `count` FROM `runs` WHERE (`status` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `runs` WHERE (`status` = 1) LIMIT 4
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  Rendered main/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 39ms (Views: 33.1ms | Models: 2.8ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:39:03 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/orders"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.0ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:40:24 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  Rendered main/orders.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 13ms (Views: 11.6ms | Models: 0.7ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:47:11 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  Rendered main/orders.html.erb within layouts/application (151.3ms)
+Completed 500 Internal Server Error in 156ms (Models: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `run' for #<#<Class:0x007fb008fb8618>:0x007fb01439d958>):
+    72:                   <div class="row align-items-center">
+    73:                     <div class="col-4 no-gutters align-items-center">
+    74:                       <%if File.exist?("./public/uploads/users/#{@user.id}/user_avatar.png") %>
+    75:                         <img class="img-thumbnail"  src="../uploads/users/<%= run.runner_id %>/user_avatar.png">
+    76:                       <%else %>
+    77:                         <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+    78:                       <%end %>
+  
+app/views/main/orders.html.erb:75:in `block in _app_views_main_orders_html_erb__889273222838394104_70197115154900'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197115154900'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:49:09 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  Rendered main/orders.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 13ms (Models: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `runner_id' for #<Order:0x007fb01442d0f8>
+Did you mean?  run_id):
+    71:                 <div class="card-body container">
+    72:                   <div class="row align-items-center">
+    73:                     <div class="col-4 no-gutters align-items-center">
+    74:                       <%if File.exist?("./public/uploads/users/#{order.runner_id}/user_avatar.png") %>
+    75:                         <img class="img-thumbnail"  src="../uploads/users/<%= order.runner_id %>/user_avatar.png">
+    76:                       <%else %>
+    77:                         <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+  
+app/views/main/orders.html.erb:74:in `block in _app_views_main_orders_html_erb__889273222838394104_70197082836120'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197082836120'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:50:33 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 12ms (Models: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `runner_id' for #<Order:0x007fb014c70e40>
+Did you mean?  run_id):
+    71:                 <div class="card-body container">
+    72:                   <div class="row align-items-center">
+    73:                     <div class="col-4 no-gutters align-items-center">
+    74:                       <%if File.exist?("./public/uploads/users/#{Order[order.run_id].runner_id}/user_avatar.png") %>
+    75:                         <img class="img-thumbnail"  src="../uploads/users/<%= Order[order.run_id].runner_id %>/user_avatar.png">
+    76:                       <%else %>
+    77:                         <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+  
+app/views/main/orders.html.erb:74:in `block in _app_views_main_orders_html_erb__889273222838394104_70197119438620'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197119438620'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:50:34 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 8ms (Models: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `runner_id' for #<Order:0x007fb014aec308>
+Did you mean?  run_id):
+    71:                 <div class="card-body container">
+    72:                   <div class="row align-items-center">
+    73:                     <div class="col-4 no-gutters align-items-center">
+    74:                       <%if File.exist?("./public/uploads/users/#{Order[order.run_id].runner_id}/user_avatar.png") %>
+    75:                         <img class="img-thumbnail"  src="../uploads/users/<%= Order[order.run_id].runner_id %>/user_avatar.png">
+    76:                       <%else %>
+    77:                         <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+  
+app/views/main/orders.html.erb:74:in `block in _app_views_main_orders_html_erb__889273222838394104_70197186958560'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197186958560'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:50:35 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 15ms (Models: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `runner_id' for #<Order:0x007fb01854c3e0>
+Did you mean?  run_id):
+    71:                 <div class="card-body container">
+    72:                   <div class="row align-items-center">
+    73:                     <div class="col-4 no-gutters align-items-center">
+    74:                       <%if File.exist?("./public/uploads/users/#{Order[order.run_id].runner_id}/user_avatar.png") %>
+    75:                         <img class="img-thumbnail"  src="../uploads/users/<%= Order[order.run_id].runner_id %>/user_avatar.png">
+    76:                       <%else %>
+    77:                         <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+  
+app/views/main/orders.html.erb:74:in `block in _app_views_main_orders_html_erb__889273222838394104_70197189414000'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197189414000'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:50:35 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 6ms (Models: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `runner_id' for #<Order:0x007fb014167120>
+Did you mean?  run_id):
+    71:                 <div class="card-body container">
+    72:                   <div class="row align-items-center">
+    73:                     <div class="col-4 no-gutters align-items-center">
+    74:                       <%if File.exist?("./public/uploads/users/#{Order[order.run_id].runner_id}/user_avatar.png") %>
+    75:                         <img class="img-thumbnail"  src="../uploads/users/<%= Order[order.run_id].runner_id %>/user_avatar.png">
+    76:                       <%else %>
+    77:                         <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+  
+app/views/main/orders.html.erb:74:in `block in _app_views_main_orders_html_erb__889273222838394104_70197113707800'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197113707800'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:50:35 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 8ms (Models: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `runner_id' for #<Order:0x007fb01886e640>
+Did you mean?  run_id):
+    71:                 <div class="card-body container">
+    72:                   <div class="row align-items-center">
+    73:                     <div class="col-4 no-gutters align-items-center">
+    74:                       <%if File.exist?("./public/uploads/users/#{Order[order.run_id].runner_id}/user_avatar.png") %>
+    75:                         <img class="img-thumbnail"  src="../uploads/users/<%= Order[order.run_id].runner_id %>/user_avatar.png">
+    76:                       <%else %>
+    77:                         <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+  
+app/views/main/orders.html.erb:74:in `block in _app_views_main_orders_html_erb__889273222838394104_70197015248040'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197015248040'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:50:35 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 8ms (Models: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `runner_id' for #<Order:0x007fb01877cd68>
+Did you mean?  run_id):
+    71:                 <div class="card-body container">
+    72:                   <div class="row align-items-center">
+    73:                     <div class="col-4 no-gutters align-items-center">
+    74:                       <%if File.exist?("./public/uploads/users/#{Order[order.run_id].runner_id}/user_avatar.png") %>
+    75:                         <img class="img-thumbnail"  src="../uploads/users/<%= Order[order.run_id].runner_id %>/user_avatar.png">
+    76:                       <%else %>
+    77:                         <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+  
+app/views/main/orders.html.erb:74:in `block in _app_views_main_orders_html_erb__889273222838394104_70197119482760'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197119482760'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:50:36 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `orders` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 19ms (Models: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `runner_id' for #<Order:0x007fb01414f160>
+Did you mean?  run_id):
+    71:                 <div class="card-body container">
+    72:                   <div class="row align-items-center">
+    73:                     <div class="col-4 no-gutters align-items-center">
+    74:                       <%if File.exist?("./public/uploads/users/#{Order[order.run_id].runner_id}/user_avatar.png") %>
+    75:                         <img class="img-thumbnail"  src="../uploads/users/<%= Order[order.run_id].runner_id %>/user_avatar.png">
+    76:                       <%else %>
+    77:                         <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+  
+app/views/main/orders.html.erb:74:in `block in _app_views_main_orders_html_erb__889273222838394104_70197314683680'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197314683680'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:50:36 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `orders` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 5ms (Models: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `runner_id' for #<Order:0x007fb0182ef6d8>
+Did you mean?  run_id):
+    71:                 <div class="card-body container">
+    72:                   <div class="row align-items-center">
+    73:                     <div class="col-4 no-gutters align-items-center">
+    74:                       <%if File.exist?("./public/uploads/users/#{Order[order.run_id].runner_id}/user_avatar.png") %>
+    75:                         <img class="img-thumbnail"  src="../uploads/users/<%= Order[order.run_id].runner_id %>/user_avatar.png">
+    76:                       <%else %>
+    77:                         <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+  
+app/views/main/orders.html.erb:74:in `block in _app_views_main_orders_html_erb__889273222838394104_70197183907080'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197183907080'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:50:56 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 10ms (Models: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `business_id' for #<Sequel::Mysql2::Dataset:0x007fb011a5eb00>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run.where(id: order.run_id).business_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__889273222838394104_70197093028080'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197093028080'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:51:41 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 9ms (Models: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `business_id' for #<Run:0x007fb0092d9900>
+Did you mean?  bussiness_id
+               bussiness_id=):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].business_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__889273222838394104_70197022128860'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197022128860'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:51:48 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (91.2ms)
+Completed 500 Internal Server Error in 97ms (Models: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fb008fb8618>:0x007fb0093d5c00>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__889273222838394104_70197022995220'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197022995220'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:52:01 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (129.9ms)
+Completed 500 Internal Server Error in 138ms (Models: 3.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fb008fb8618>:0x007fb014d12ba0>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <!-- <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5> -->
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__889273222838394104_70197120114200'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197120114200'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:52:32 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (98.0ms)
+Completed 500 Internal Server Error in 105ms (Models: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fb01063a660>:0x007fb01c47c3f8>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__889273222838394104_70197185015180'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197185015180'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:52:33 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (168.3ms)
+Completed 500 Internal Server Error in 174ms (Models: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fb01063a660>:0x007fb01cc60628>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__889273222838394104_70197186857200'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197186857200'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:53:34 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (79.9ms)
+Completed 500 Internal Server Error in 82ms (Models: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fb0182d7060>:0x007fb0182d5490>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__889273222838394104_70197148302520'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197148302520'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:53:35 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.8ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (114.9ms)
+Completed 500 Internal Server Error in 124ms (Models: 3.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fb0182d7060>:0x007fb011a33568>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__889273222838394104_70197093516400'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197093516400'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:53:36 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (92.8ms)
+Completed 500 Internal Server Error in 99ms (Models: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fb0182d7060>:0x007fb01cb9a338>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__889273222838394104_70197186453140'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197186453140'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:53:36 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (88.4ms)
+Completed 500 Internal Server Error in 92ms (Models: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fb0182d7060>:0x0055b1e23bfd50>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__889273222838394104_47111246498620'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_47111246498620'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:53:37 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (92.4ms)
+Completed 500 Internal Server Error in 97ms (Models: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fb0182d7060>:0x007fb01cebf130>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__889273222838394104_70197188099500'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197188099500'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:53:37 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (99.4ms)
+Completed 500 Internal Server Error in 102ms (Models: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fb0182d7060>:0x007fb01d1fc4d8>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__889273222838394104_70197189797760'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197189797760'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:53:37 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (83.4ms)
+Completed 500 Internal Server Error in 85ms (Models: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fb0182d7060>:0x007fb009460da0>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__889273222838394104_70197023280100'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197023280100'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:53:38 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (76.0ms)
+Completed 500 Internal Server Error in 79ms (Models: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fb0182d7060>:0x007fb01cf3b320>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__889273222838394104_70197188305200'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197188305200'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:53:38 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (86.3ms)
+Completed 500 Internal Server Error in 88ms (Models: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fb0182d7060>:0x007fb0140090d0>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__889273222838394104_70197113280400'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197113280400'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:53:38 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (99.1ms)
+Completed 500 Internal Server Error in 102ms (Models: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fb0182d7060>:0x007fb009422820>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__889273222838394104_70197023152440'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197023152440'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:53:39 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (82.2ms)
+Completed 500 Internal Server Error in 84ms (Models: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fb0182d7060>:0x007fb01825d3f0>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__889273222838394104_70197148053780'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197148053780'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:53:39 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (117.1ms)
+Completed 500 Internal Server Error in 120ms (Models: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fb0182d7060>:0x007fb010ea8bf8>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__889273222838394104_70197087390540'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197087390540'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:53:39 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (74.6ms)
+Completed 500 Internal Server Error in 77ms (Models: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fb0182d7060>:0x007fb01ccf3d10>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__889273222838394104_70197187093520'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__889273222838394104_70197187093520'
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:50 -0800
+  [1m[35mSequel::Mysql2::Database (1.2ms)[0m  DESCRIBE `runs`
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT version()[0m
+  [1m[35mSequel::Mysql2::Database (1.2ms)[0m  DESCRIBE `users`
+  [1m[36mSequel::Mysql2::Database (0.9ms)[0m  [1mDESCRIBE `orders`[0m
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (77.3ms)
+Completed 500 Internal Server Error in 94ms (Models: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x007fc190184af8>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234661421840'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234661421840'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:51 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (87.5ms)
+Completed 500 Internal Server Error in 91ms (Models: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x007fc1840189f0>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234560055820'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234560055820'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:51 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (74.7ms)
+Completed 500 Internal Server Error in 81ms (Models: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x007fc190f52b08>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234668702380'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234668702380'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:52 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (77.4ms)
+Completed 500 Internal Server Error in 79ms (Models: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x0055d806b184e0>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193156800720'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193156800720'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:52 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (67.2ms)
+Completed 500 Internal Server Error in 69ms (Models: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x007fc1915457e0>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234671821060'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234671821060'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:52 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (69.5ms)
+Completed 500 Internal Server Error in 73ms (Models: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x007fc19151f928>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234672472540'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234672472540'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:53 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (67.2ms)
+Completed 500 Internal Server Error in 69ms (Models: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x0055d8071461a0>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193160073900'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193160073900'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:53 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (75.2ms)
+Completed 500 Internal Server Error in 77ms (Models: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x0055d8089b3788>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193172894240'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193172894240'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:53 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (73.2ms)
+Completed 500 Internal Server Error in 77ms (Models: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x007fc1913192c8>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234670681720'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234670681720'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:54 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (69.4ms)
+Completed 500 Internal Server Error in 72ms (Models: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x007fc191012098>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234669094260'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234669094260'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:54 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (74.5ms)
+Completed 500 Internal Server Error in 78ms (Models: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x007fc1915cb480>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234672095060'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234672095060'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:54 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (71.9ms)
+Completed 500 Internal Server Error in 75ms (Models: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x007fc1842274a8>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234561134440'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234561134440'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:55 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (75.3ms)
+Completed 500 Internal Server Error in 78ms (Models: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x007fc1916162c8>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234672248580'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234672248580'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:55 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (103.5ms)
+Completed 500 Internal Server Error in 106ms (Models: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x007fc191371478>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234670862200'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234670862200'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:55 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (1.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (85.2ms)
+Completed 500 Internal Server Error in 89ms (Models: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x007fc1913e2f10>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234671094940'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234671094940'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:56 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (80.0ms)
+Completed 500 Internal Server Error in 82ms (Models: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x0055d804bcf4a8>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193140423940'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193140423940'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:56 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (86.6ms)
+Completed 500 Internal Server Error in 91ms (Models: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x0055d806356608>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193152752920'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193152752920'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:56 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (80.1ms)
+Completed 500 Internal Server Error in 83ms (Models: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x007fc19175f738>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234672931220'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234672931220'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:56 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (6.1ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (21.0ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (5.7ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (10.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (115.4ms)
+Completed 500 Internal Server Error in 131ms (Models: 43.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x007fc190b257b0>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234666512640'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234666512640'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:57 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (87.7ms)
+Completed 500 Internal Server Error in 90ms (Models: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x0055d808a09188>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193173023340'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193173023340'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:57 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (161.3ms)
+Completed 500 Internal Server Error in 168ms (Models: 3.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x0055d8088dfd48>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193172412000'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193172412000'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:57 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (81.3ms)
+Completed 500 Internal Server Error in 84ms (Models: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x0055d808b4a600>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193173679480'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193173679480'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:57 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (81.2ms)
+Completed 500 Internal Server Error in 84ms (Models: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x0055d808c6cb78>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193174273460'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193174273460'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:58 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (71.7ms)
+Completed 500 Internal Server Error in 75ms (Models: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x007fc19011a248>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234661246640'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234661246640'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:58 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (71.3ms)
+Completed 500 Internal Server Error in 76ms (Models: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x007fc1901b8a10>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234661571520'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234661571520'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:58 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (76.1ms)
+Completed 500 Internal Server Error in 80ms (Models: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x007fc1918d64e0>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234673690500'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234673690500'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:59 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (78.2ms)
+Completed 500 Internal Server Error in 81ms (Models: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x007fc1919bf7a8>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234560021400'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234560021400'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:54:59 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (99.9ms)
+Completed 500 Internal Server Error in 106ms (Models: 2.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x007fc1901877a8>:0x007fc1900578b0>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234660889040'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234660889040'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:55:25 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (76.8ms)
+Completed 500 Internal Server Error in 79ms (Models: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x0055d8088aa760>:0x0055d8088a8500>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193172302220'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193172302220'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:55:26 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (81.4ms)
+Completed 500 Internal Server Error in 86ms (Models: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x0055d8088aa760>:0x0055d807890960>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193163861400'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193163861400'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:55:26 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (83.4ms)
+Completed 500 Internal Server Error in 88ms (Models: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x0055d8088aa760>:0x0055d807269528>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193160636040'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193160636040'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:55:27 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (74.2ms)
+Completed 500 Internal Server Error in 77ms (Models: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x0055d8088aa760>:0x0055d806e74dc8>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193158562120'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193158562120'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:55:27 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (87.4ms)
+Completed 500 Internal Server Error in 91ms (Models: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x0055d8088aa760>:0x0055d80600af80>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193151074240'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193151074240'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:55:28 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (86.4ms)
+Completed 500 Internal Server Error in 89ms (Models: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x0055d8088aa760>:0x0055d8042463a0>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193135460480'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193135460480'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:55:28 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (81.5ms)
+Completed 500 Internal Server Error in 84ms (Models: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `get_business_name' for #<#<Class:0x0055d8088aa760>:0x007fc1917ac5d8>):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].bussiness_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234673080320'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234673080320'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:56:27 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 13ms (Models: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `business_id' for #<Sequel::Mysql2::Dataset:0x007fc19161cdf8>):
+     98:                 <div class="modal-dialog" role="document">
+     99:                   <div class="modal-content">
+    100:                     <div class="modal-header">
+    101:                       <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run.where(id: order.run_id).business_id + "delivery" %></h5>
+    102:                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    103:                         <span aria-hidden="true">&times;</span>
+    104:                       </button>
+  
+app/views/main/orders.html.erb:101:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234562264640'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234562264640'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:57:35 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (10.3ms)
+Completed 500 Internal Server Error in 25ms (Models: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `business_id' for #<Sequel::Mysql2::Dataset:0x007fc1914e4080>):
+     98:                 <div class="modal-dialog" role="document">
+     99:                   <div class="modal-content">
+    100:                     <div class="modal-header">
+    101:                       <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run.where(id: order.run_id).business_id + "delivery" %></h5>
+    102:                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    103:                         <span aria-hidden="true">&times;</span>
+    104:                       </button>
+  
+app/views/main/orders.html.erb:101:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234671799560'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234671799560'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:57:36 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 14ms (Models: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `business_id' for #<Sequel::Mysql2::Dataset:0x0055d8072e5100>):
+     98:                 <div class="modal-dialog" role="document">
+     99:                   <div class="modal-content">
+    100:                     <div class="modal-header">
+    101:                       <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run.where(id: order.run_id).business_id + "delivery" %></h5>
+    102:                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    103:                         <span aria-hidden="true">&times;</span>
+    104:                       </button>
+  
+app/views/main/orders.html.erb:101:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193161714380'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193161714380'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:57:36 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (14.6ms)
+Completed 500 Internal Server Error in 20ms (Models: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `business_id' for #<Sequel::Mysql2::Dataset:0x0055d808a75c98>):
+     98:                 <div class="modal-dialog" role="document">
+     99:                   <div class="modal-content">
+    100:                     <div class="modal-header">
+    101:                       <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run.where(id: order.run_id).business_id + "delivery" %></h5>
+    102:                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    103:                         <span aria-hidden="true">&times;</span>
+    104:                       </button>
+  
+app/views/main/orders.html.erb:101:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193173887460'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193173887460'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:57:37 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 9ms (Models: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `business_id' for #<Sequel::Mysql2::Dataset:0x007fc190ee1f98>):
+     98:                 <div class="modal-dialog" role="document">
+     99:                   <div class="modal-content">
+    100:                     <div class="modal-header">
+    101:                       <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run.where(id: order.run_id).business_id + "delivery" %></h5>
+    102:                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    103:                         <span aria-hidden="true">&times;</span>
+    104:                       </button>
+  
+app/views/main/orders.html.erb:101:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234668749420'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234668749420'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:57:37 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 10ms (Models: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `business_id' for #<Sequel::Mysql2::Dataset:0x0055d806a7d6e8>):
+     98:                 <div class="modal-dialog" role="document">
+     99:                   <div class="modal-content">
+    100:                     <div class="modal-header">
+    101:                       <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run.where(id: order.run_id).business_id + "delivery" %></h5>
+    102:                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    103:                         <span aria-hidden="true">&times;</span>
+    104:                       </button>
+  
+app/views/main/orders.html.erb:101:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193158902240'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193158902240'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:57:37 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (10.4ms)
+Completed 500 Internal Server Error in 13ms (Models: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `business_id' for #<Sequel::Mysql2::Dataset:0x007fc1918d4e38>):
+     98:                 <div class="modal-dialog" role="document">
+     99:                   <div class="modal-content">
+    100:                     <div class="modal-header">
+    101:                       <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run.where(id: order.run_id).business_id + "delivery" %></h5>
+    102:                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    103:                         <span aria-hidden="true">&times;</span>
+    104:                       </button>
+  
+app/views/main/orders.html.erb:101:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234671080780'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234671080780'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:57:38 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 11ms (Models: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `business_id' for #<Sequel::Mysql2::Dataset:0x007fc1844ea550>):
+     98:                 <div class="modal-dialog" role="document">
+     99:                   <div class="modal-content">
+    100:                     <div class="modal-header">
+    101:                       <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run.where(id: order.run_id).business_id + "delivery" %></h5>
+    102:                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    103:                         <span aria-hidden="true">&times;</span>
+    104:                       </button>
+  
+app/views/main/orders.html.erb:101:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234672265540'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234672265540'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:58:54 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 10ms (Models: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+     98:                 <div class="modal-dialog" role="document">
+     99:                   <div class="modal-content">
+    100:                     <div class="modal-header">
+    101:                       <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run[order.run_id].bussiness_id + "delivery" %></h5>
+    102:                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    103:                         <span aria-hidden="true">&times;</span>
+    104:                       </button>
+  
+app/views/main/orders.html.erb:101:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234562077200'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234562077200'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:58:55 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 12ms (Models: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+     98:                 <div class="modal-dialog" role="document">
+     99:                   <div class="modal-content">
+    100:                     <div class="modal-header">
+    101:                       <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run[order.run_id].bussiness_id + "delivery" %></h5>
+    102:                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    103:                         <span aria-hidden="true">&times;</span>
+    104:                       </button>
+  
+app/views/main/orders.html.erb:101:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193159608640'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193159608640'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:58:56 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 6ms (Models: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+     98:                 <div class="modal-dialog" role="document">
+     99:                   <div class="modal-content">
+    100:                     <div class="modal-header">
+    101:                       <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run[order.run_id].bussiness_id + "delivery" %></h5>
+    102:                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    103:                         <span aria-hidden="true">&times;</span>
+    104:                       </button>
+  
+app/views/main/orders.html.erb:101:in `block in _app_views_main_orders_html_erb__2295965241536675794_47193172901420'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_47193172901420'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:59:25 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 7ms (Models: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `business_id' for #<Run:0x007fc191729318>
+Did you mean?  bussiness_id
+               bussiness_id=):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].business_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run[order.run_id].business_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234673328980'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234673328980'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:59:26 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 9ms (Models: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `business_id' for #<Run:0x007fc190fbb068>
+Did you mean?  bussiness_id
+               bussiness_id=):
+    79:                     </div>
+    80:                     <div class="col-7">
+    81:                       <div class="row">
+    82:                         <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].business_id %></h5>
+    83:                         <div class="row">
+    84:                           <div class="col-5">
+    85:                             <p class="card-text">Run[order.run_id].business_id</p>
+  
+app/views/main/orders.html.erb:82:in `block in _app_views_main_orders_html_erb__2295965241536675794_70234670795180'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__2295965241536675794_70234670795180'
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 12:59:58 -0800
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  DESCRIBE `runs`
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT version()[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  DESCRIBE `users`
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mDESCRIBE `orders`[0m
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 10ms (Models: 1.2ms)
+
+
+  
+ActionView::Template::Error (String can't be coerced into Fixnum):
+     98:                 <div class="modal-dialog" role="document">
+     99:                   <div class="modal-content">
+    100:                     <div class="modal-header">
+    101:                       <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run[order.run_id].business_id + "delivery" %></h5>
+    102:                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    103:                         <span aria-hidden="true">&times;</span>
+    104:                       </button>
+  
+app/views/main/orders.html.erb:101:in `+'
+app/views/main/orders.html.erb:101:in `block in _app_views_main_orders_html_erb__3913532369544066965_69945992446320'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__3913532369544066965_69945992446320'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 13:00:02 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 6ms (Models: 1.7ms)
+
+
+  
+ActionView::Template::Error (String can't be coerced into Fixnum):
+     98:                 <div class="modal-dialog" role="document">
+     99:                   <div class="modal-content">
+    100:                     <div class="modal-header">
+    101:                       <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run[order.run_id].business_id + "delivery" %></h5>
+    102:                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    103:                         <span aria-hidden="true">&times;</span>
+    104:                       </button>
+  
+app/views/main/orders.html.erb:101:in `+'
+app/views/main/orders.html.erb:101:in `block in _app_views_main_orders_html_erb__3913532369544066965_69946025486080'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__3913532369544066965_69946025486080'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 13:00:03 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 14ms (Models: 2.9ms)
+
+
+  
+ActionView::Template::Error (String can't be coerced into Fixnum):
+     98:                 <div class="modal-dialog" role="document">
+     99:                   <div class="modal-content">
+    100:                     <div class="modal-header">
+    101:                       <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run[order.run_id].business_id + "delivery" %></h5>
+    102:                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    103:                         <span aria-hidden="true">&times;</span>
+    104:                       </button>
+  
+app/views/main/orders.html.erb:101:in `+'
+app/views/main/orders.html.erb:101:in `block in _app_views_main_orders_html_erb__3913532369544066965_69945924833440'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__3913532369544066965_69945924833440'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 13:00:03 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 11ms (Models: 2.5ms)
+
+
+  
+ActionView::Template::Error (String can't be coerced into Fixnum):
+     98:                 <div class="modal-dialog" role="document">
+     99:                   <div class="modal-content">
+    100:                     <div class="modal-header">
+    101:                       <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run[order.run_id].business_id + "delivery" %></h5>
+    102:                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    103:                         <span aria-hidden="true">&times;</span>
+    104:                       </button>
+  
+app/views/main/orders.html.erb:101:in `+'
+app/views/main/orders.html.erb:101:in `block in _app_views_main_orders_html_erb__3913532369544066965_69945926620300'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__3913532369544066965_69945926620300'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 13:00:04 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  Rendered main/orders.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 12ms (Models: 2.6ms)
+
+
+  
+ActionView::Template::Error (String can't be coerced into Fixnum):
+     98:                 <div class="modal-dialog" role="document">
+     99:                   <div class="modal-content">
+    100:                     <div class="modal-header">
+    101:                       <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run[order.run_id].business_id + "delivery" %></h5>
+    102:                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    103:                         <span aria-hidden="true">&times;</span>
+    104:                       </button>
+  
+app/views/main/orders.html.erb:101:in `+'
+app/views/main/orders.html.erb:101:in `block in _app_views_main_orders_html_erb__3913532369544066965_47208712888640'
+app/views/main/orders.html.erb:69:in `_app_views_main_orders_html_erb__3913532369544066965_47208712888640'
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 13:00:30 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  Rendered main/orders.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 210ms (Views: 203.1ms | Models: 3.9ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 13:00:58 -0800
+Processing by MainController#orders as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 8
+  Rendering main/orders.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20
+  Rendered main/orders.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 20ms (Views: 17.1ms | Models: 1.6ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-12 13:01:07 -0800
+Processing by MainController#orders as HTML
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 8[0m
+  Rendering main/orders.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 0) LIMIT 20[0m
+  Rendered main/orders.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 29ms (Views: 24.3ms | Models: 2.5ms)
+
+
+Started GET "/bootstrap/js/popper.min.js.map" for 127.0.0.1 at 2019-01-12 13:02:31 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/popper.min.js.map"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'

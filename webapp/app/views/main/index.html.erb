@@ -10,7 +10,11 @@
           <div class="card-body container">
             <div class="row  ">
               <div class="col-4 no-gutters align-items-center">
-                <img src="./download.png" alt="..." class="img-thumbnail">
+                <%if File.exist?("./public/uploads/users/#{@run.runner_id}/user_avatar.png") %>
+                  <img class="img-thumbnail"  src="../uploads/users/<%= run.runner_id %>/user_avatar.png">
+                <%else %>
+                  <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+                <%end %>
               </div>
               <div class="col-7">
                 <div class="row">

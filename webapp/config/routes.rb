@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   post 'user/preferences' => 'main#user_edit_post'
   post 'index' => 'main#index'
   get 'runs/new' => "main#new_run"
+  get 'orders' => 'main#orders'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
