@@ -2,7 +2,7 @@ Sequel.migration do
   change do
     create_table(:orders) do
       primary_key :id, :type=>"int(11)"
-      column :runner_id, "int(11)"
+      column :run_id, "int(11)"
       column :user_id, "int(11)"
       column :order_desc, "text"
       column :status, "int(11)"

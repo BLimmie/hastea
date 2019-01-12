@@ -26,10 +26,10 @@
                     </div>
                     <div class="col-6">
                       <div class="row ml-1">
-                        <h5 class="mb-3 ml-5"><%= Order.where(run_ID: run.id).count + '/' + run.order_cap %></h5>
+                        <h5 class="mb-3 ml-5"><%= Order.where(run_id: run.id).count.to_s + '/' + run.order_cap.to_s %></h5>
                       </div>
                       <div class="row ml-5 ">
-                        <h6 class="card-subutitle mb-1 text-muted "><%= '%02d' % (Time.now - run.date).hour %></h6>
+                        <h6 class="card-subutitle mb-1 text-muted "><%= '%02d' % (run.datetime - Time.now).hour %></h6>
                       </div>
 
                       <div class="row">
@@ -46,7 +46,9 @@
       <% end %>
       <p></p>
       <div class="container">
-        <button type="button" class="btn btn-primary">Submit Run</button>
+        <a href="/runs/new">
+          <button type="button" class="btn btn-primary">Submit Run</button>
+        </a>
       </div>
     </div>
     <div class="col-6">

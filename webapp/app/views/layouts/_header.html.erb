@@ -7,7 +7,8 @@
   <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
   <link href="/css.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="/bootstrap/js/typeahead.bundle.js"></script>
   <script src="/bootstrap/js/popper.min.js"></script>
@@ -52,8 +53,8 @@
                     <a class="dropdown-item" href="/logout"><i class="mr-1 fas fa-sign-out-alt"></i>Logout</a>
                   </div>
                 </li>
-                <span class="navbar-text">
-                  <%= @user.credits/100 %> <i class="fa fa-money-bill-wave" style="color:white"></i>
+                <span class="navbar-text" style="color:green; font-weight:bold;">
+                  <i class="fas fa-dollar-sign" style="color:white"></i><%= @user.credits/100 %>
                 </span>
               </ul>
             </div>
