@@ -48,6 +48,13 @@ class MainController < ApplicationController
       This is a notification that #{user.first_name} #{user.last_name} has created an account on HasTea.
       If this was you, please use activation code #{activation_code} to activate your account at url.com/activation
     EOS
+
+    client = Twilio::REST::Client.new
+      client.messages.create({
+        from: Rails.application.secrets.twilio_phone_number,
+        to: '+1'+user.phone_number
+        body: text_body
+      })
     @notice = "We've got your account, but need you to verify your phone number!"
 
   end
