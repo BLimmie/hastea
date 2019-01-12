@@ -1,5 +1,5 @@
 class Order < Sequel::Model
-  order_status = {
+  ORDER_STATUS = {
     1 => "Active",
     0 => "InActive"
     }
