@@ -2,9 +2,9 @@
 <div class="container nav-sep">
   <h2>Edit Preferences</h2>
   <hr>
-  <form class="form-signin" action="" method="POST">
-    <%if File.exist?("./uploads/users/#{@user.id}/user_avatar.png") %>
-      <img class="rounded" style="width:250px;height:250px;" src="./uploads/user/<%= @user.id %>/user_avatar.png"><br>
+  <form class="form-signin" action="" method="POST" enctype="multipart/form-data">
+    <%if File.exist?("./public/uploads/users/#{@user.id}/user_avatar.png") %>
+      <img class="rounded" style="width:250px;height:250px;" src="../uploads/users/<%= @user.id %>/user_avatar.png"><br>
     <%else %>
       <img class="rounded" style="width:250px;height:250px;" src="/img/avatar_placeholder.png"><br>
     <%end %>
@@ -22,12 +22,11 @@
     <input type="password" name="password2" />
     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     <br>
-       <div class="float-right">
-         <label >
-           Upload profile photo <%= file_field(:user, :avatar) %>
+         <label class="mx-auto btn btn-primary btn-medium">
+           Upload profile photo <input type="file" style="display: none;" name="avatar" accept="image/*">
          </label>
-       </div>
-
+         <br>
+         <br>
     <label>
       <input type="submit" class="btn btn-primary mt-2" value="Save"
           onclick="return verifyPasswordMatch(this.parentElement.parentElement);" />
