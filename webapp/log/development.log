@@ -13882,3 +13882,662 @@ puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
   [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET NAMES utf8[0m
   [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET @@wait_timeout = 2147483
   [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+Started GET "/user/preferences" for 127.0.0.1 at 2019-01-12 03:46:38 -0800
+Processing by MainController#user_prefs as HTML
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+Redirected to http://localhost:3000/login?redirect=/user/preferences
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (Models: 0.3ms)
+
+
+Started GET "/login?redirect=/user/preferences" for 127.0.0.1 at 2019-01-12 03:46:38 -0800
+Processing by MainController#login as HTML
+  Parameters: {"redirect"=>"/user/preferences"}
+  Rendering main/login.html.erb within layouts/application
+  Rendered main/login.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 14ms (Views: 13.5ms | Models: 0.0ms)
+
+
+Started GET "/img/logo-basic-2018.png" for 127.0.0.1 at 2019-01-12 03:46:38 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-basic-2018.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/bootstrap/js/popper.min.js.map" for 127.0.0.1 at 2019-01-12 03:46:38 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/popper.min.js.map"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/register" for 127.0.0.1 at 2019-01-12 03:46:40 -0800
+Processing by MainController#register as HTML
+  Rendering main/register.html.erb within layouts/application
+  Rendered main/register.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 18ms (Views: 16.6ms | Models: 0.0ms)
+
+
+Started GET "/bootstrap/js/popper.min.js.map" for 127.0.0.1 at 2019-01-12 03:46:41 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/popper.min.js.map"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/register" for 127.0.0.1 at 2019-01-12 03:46:45 -0800
+Processing by MainController#register_post as HTML
+  Parameters: {"email"=>"brinsfield.cole@gmail.com", "phone_number"=>"6504688601", "first_name"=>"Cole", "last_name"=>"Brinsfield", "password"=>"[FILTERED]", "password2"=>"[FILTERED]", "authenticity_token"=>"JOksTovSUb44wE8E6eKg7xogD+b/r815VReQk/e0VJaG/4MEZAOsMyT7unaD+o0zRdw3j5gv35vUdhK57klWGA=="}
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `users` WHERE (`email` = 'brinsfield.cole@gmail.com') LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  BEGIN
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mINSERT INTO `users` (`email`, `first_name`, `last_name`, `is_verified`, `phone_number`, `credits`, `rating_score`, `rating_count`, `activation_code`, `salt`, `password`) VALUES ('brinsfield.cole@gmail.com', 'Cole', 'Brinsfield', 0, '6504688601', 1000, 0, 0, 3395, 'Jvgksk/d6xNnWeRvK3KL/99iHeMojjg/', '25X1o59R/MT40IO63Nwicgdv6rum+CDs\n')[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `users` WHERE `id` = 2
+  [1m[36mSequel::Mysql2::Database (4.5ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 111ms (Models: 6.1ms)
+
+
+  
+NameError (undefined local variable or method `action' for #<MainController:0x007f5d1423a578>
+Did you mean?  activation):
+  
+app/controllers/main_controller.rb:44:in `register_post'
+Started POST "/register" for 127.0.0.1 at 2019-01-12 03:46:56 -0800
+Processing by MainController#register_post as HTML
+  Parameters: {"email"=>"brinsfield.cole@gmail.com", "phone_number"=>"6504688601", "first_name"=>"Cole", "last_name"=>"Brinsfield", "password"=>"[FILTERED]", "password2"=>"[FILTERED]", "authenticity_token"=>"JOksTovSUb44wE8E6eKg7xogD+b/r815VReQk/e0VJaG/4MEZAOsMyT7unaD+o0zRdw3j5gv35vUdhK57klWGA=="}
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE (`email` = 'brinsfield.cole@gmail.com') LIMIT 1
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 1.0ms | Models: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-12 03:47:21 -0800
+Started GET "/index" for 127.0.0.1 at 2019-01-12 03:47:21 -0800
+Processing by MainController#index as HTML
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+Redirected to http://localhost:3000/login?redirect=/index
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (Models: 0.2ms)
+
+
+Started GET "/login?redirect=/index" for 127.0.0.1 at 2019-01-12 03:47:21 -0800
+Processing by MainController#login as HTML
+  Parameters: {"redirect"=>"/index"}
+  Rendering main/login.html.erb within layouts/application
+  Rendered main/login.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 14ms (Views: 13.5ms | Models: 0.0ms)
+
+
+Started GET "/img/logo-basic-2018.png" for 127.0.0.1 at 2019-01-12 03:47:21 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-basic-2018.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/bootstrap/js/popper.min.js.map" for 127.0.0.1 at 2019-01-12 03:47:21 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/popper.min.js.map"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/login?redirect=/index" for 127.0.0.1 at 2019-01-12 03:47:23 -0800
+Processing by MainController#login_post as HTML
+  Parameters: {"email"=>"brinsfield.cole@gmail.com", "password"=>"[FILTERED]", "authenticity_token"=>"yzLyUy6Z0cn9VVI1AfiB+fsyGXll4AWCfTvrempq/7ppJF0ZwUgsROFup0dr4KwlpM4hEAJgF2D8WmlQc5f9NA==", "redirect"=>"/index"}
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `users` WHERE (`email` = 'brinsfield.cole@gmail.com') LIMIT 1
+Redirected to http://localhost:3000/login?disabled=1
+Completed 302 Found in 8ms (Models: 0.7ms)
+
+
+Started GET "/login?disabled=1" for 127.0.0.1 at 2019-01-12 03:47:23 -0800
+Processing by MainController#login as HTML
+  Parameters: {"disabled"=>"1"}
+  Rendering main/login.html.erb within layouts/application
+  Rendered main/login.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 19ms (Views: 17.7ms | Models: 0.0ms)
+
+
+Started GET "/img/logo-basic-2018.png" for 127.0.0.1 at 2019-01-12 03:47:23 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-basic-2018.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/bootstrap/js/popper.min.js.map" for 127.0.0.1 at 2019-01-12 03:47:24 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/popper.min.js.map"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login?disabled=1" for 127.0.0.1 at 2019-01-12 03:47:36 -0800
+Processing by MainController#login as HTML
+  Parameters: {"disabled"=>"1"}
+  Rendering main/login.html.erb within layouts/application
+  Rendered main/login.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 29ms (Views: 26.8ms | Models: 0.0ms)
+
+
+Started GET "/img/logo-basic-2018.png" for 127.0.0.1 at 2019-01-12 03:47:36 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-basic-2018.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/bootstrap/js/popper.min.js.map" for 127.0.0.1 at 2019-01-12 03:47:36 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/popper.min.js.map"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-12 03:47:38 -0800
+Started GET "/index" for 127.0.0.1 at 2019-01-12 03:47:38 -0800
+Processing by MainController#index as HTML
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+Redirected to http://localhost:3000/login?redirect=/index
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (Models: 0.3ms)
+
+
+Started GET "/login?redirect=/index" for 127.0.0.1 at 2019-01-12 03:47:38 -0800
+Processing by MainController#login as HTML
+  Parameters: {"redirect"=>"/index"}
+  Rendering main/login.html.erb within layouts/application
+  Rendered main/login.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 15ms (Views: 14.1ms | Models: 0.0ms)
+
+
+Started GET "/img/logo-basic-2018.png" for 127.0.0.1 at 2019-01-12 03:47:39 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-basic-2018.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/bootstrap/js/popper.min.js.map" for 127.0.0.1 at 2019-01-12 03:47:39 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/popper.min.js.map"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/register" for 127.0.0.1 at 2019-01-12 03:47:41 -0800
+Processing by MainController#register as HTML
+  Rendering main/register.html.erb within layouts/application
+  Rendered main/register.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 14ms (Views: 12.3ms | Models: 0.0ms)
+
+
+Started GET "/bootstrap/js/popper.min.js.map" for 127.0.0.1 at 2019-01-12 03:47:41 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/popper.min.js.map"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/register" for 127.0.0.1 at 2019-01-12 03:47:46 -0800
+Processing by MainController#register_post as HTML
+  Parameters: {"email"=>"brinsfield.cole@gmail.com", "phone_number"=>"6504688601", "first_name"=>"Cole", "last_name"=>"Brinsfield", "password"=>"[FILTERED]", "password2"=>"[FILTERED]", "authenticity_token"=>"7mKfz99HLvcIPdzAXnSQ+m+FzTKNODFDZ4gy10k6FlpMdDCFMJbTehQGKbI0bL0mMHn1W+q4I6Hm6bD9UMcU1A=="}
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `users` WHERE (`email` = 'brinsfield.cole@gmail.com') LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  INSERT INTO `users` (`email`, `first_name`, `last_name`, `is_verified`, `phone_number`, `credits`, `rating_score`, `rating_count`, `activation_code`, `salt`, `password`) VALUES ('brinsfield.cole@gmail.com', 'Cole', 'Brinsfield', 0, '6504688601', 1000, 0, 0, 627, 'ifjIc2y6wYaLdSJb+UDtJoZ7hHvhgzr+', 'TlPy5UXKemSzZ9Uh6/SmmGbEcb1aW87z\n')
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 3[0m
+  [1m[35mSequel::Mysql2::Database (4.6ms)[0m  COMMIT
+Completed 500 Internal Server Error in 93ms (Models: 6.2ms)
+
+
+  
+NameError (undefined local variable or method `activation_code' for #<MainController:0x007f5d082a0820>
+Did you mean?  activation
+               activation_post
+               activation_url
+               activation_path):
+  
+app/controllers/main_controller.rb:48:in `register_post'
+Started POST "/register" for 127.0.0.1 at 2019-01-12 03:48:03 -0800
+Processing by MainController#register_post as HTML
+  Parameters: {"email"=>"brinsfield.cole@gmail.com", "phone_number"=>"6504688601", "first_name"=>"Cole", "last_name"=>"Brinsfield", "password"=>"[FILTERED]", "password2"=>"[FILTERED]", "authenticity_token"=>"7mKfz99HLvcIPdzAXnSQ+m+FzTKNODFDZ4gy10k6FlpMdDCFMJbTehQGKbI0bL0mMHn1W+q4I6Hm6bD9UMcU1A=="}
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE (`email` = 'brinsfield.cole@gmail.com') LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | Models: 0.3ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2019-01-12 03:48:14 -0800
+Processing by MainController#register_post as HTML
+  Parameters: {"email"=>"brinsfield.cole@gmail.com", "phone_number"=>"6504688601", "first_name"=>"Cole", "last_name"=>"Brinsfield", "password"=>"[FILTERED]", "password2"=>"[FILTERED]", "authenticity_token"=>"7mKfz99HLvcIPdzAXnSQ+m+FzTKNODFDZ4gy10k6FlpMdDCFMJbTehQGKbI0bL0mMHn1W+q4I6Hm6bD9UMcU1A=="}
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `users` WHERE (`email` = 'brinsfield.cole@gmail.com') LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSequel::Mysql2::Database (0.8ms)[0m  INSERT INTO `users` (`email`, `first_name`, `last_name`, `is_verified`, `phone_number`, `credits`, `rating_score`, `rating_count`, `activation_code`, `salt`, `password`) VALUES ('brinsfield.cole@gmail.com', 'Cole', 'Brinsfield', 0, '6504688601', 1000, 0, 0, 9995, 'xqV/rINfZpoiAYI4ZC7JTV/983ZTZY3y', 's3K3l37u7l5cw51isXSYM7dPw21pvSU0\n')
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 4[0m
+  [1m[35mSequel::Mysql2::Database (4.6ms)[0m  COMMIT
+Completed 500 Internal Server Error in 21ms (Models: 7.0ms)
+
+
+  
+NoMethodError (undefined method `dedent' for #<String:0x007f5d1d139cd8>):
+  
+app/controllers/main_controller.rb:49:in `register_post'
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.0ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.0ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+Started POST "/register" for 127.0.0.1 at 2019-01-12 03:48:59 -0800
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  DESCRIBE `runs`
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT version()[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  DESCRIBE `users`
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mDESCRIBE `orders`[0m
+Processing by MainController#register_post as HTML
+  Parameters: {"email"=>"brinsfield.cole@gmail.com", "phone_number"=>"6504688601", "first_name"=>"Cole", "last_name"=>"Brinsfield", "password"=>"[FILTERED]", "password2"=>"[FILTERED]", "authenticity_token"=>"7mKfz99HLvcIPdzAXnSQ+m+FzTKNODFDZ4gy10k6FlpMdDCFMJbTehQGKbI0bL0mMHn1W+q4I6Hm6bD9UMcU1A=="}
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE (`email` = 'brinsfield.cole@gmail.com') LIMIT 1
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 7ms (Views: 1.8ms | Models: 0.3ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2019-01-12 03:49:07 -0800
+Processing by MainController#register_post as HTML
+  Parameters: {"email"=>"brinsfield.cole@gmail.com", "phone_number"=>"6504688601", "first_name"=>"Cole", "last_name"=>"Brinsfield", "password"=>"[FILTERED]", "password2"=>"[FILTERED]", "authenticity_token"=>"7mKfz99HLvcIPdzAXnSQ+m+FzTKNODFDZ4gy10k6FlpMdDCFMJbTehQGKbI0bL0mMHn1W+q4I6Hm6bD9UMcU1A=="}
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `users` WHERE (`email` = 'brinsfield.cole@gmail.com') LIMIT 1[0m
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 5ms (Views: 1.0ms | Models: 0.7ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2019-01-12 03:49:12 -0800
+Processing by MainController#register_post as HTML
+  Parameters: {"email"=>"brinsfield.cole@gmail.com", "phone_number"=>"6504688601", "first_name"=>"Cole", "last_name"=>"Brinsfield", "password"=>"[FILTERED]", "password2"=>"[FILTERED]", "authenticity_token"=>"7mKfz99HLvcIPdzAXnSQ+m+FzTKNODFDZ4gy10k6FlpMdDCFMJbTehQGKbI0bL0mMHn1W+q4I6Hm6bD9UMcU1A=="}
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `users` WHERE (`email` = 'brinsfield.cole@gmail.com') LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  INSERT INTO `users` (`email`, `first_name`, `last_name`, `is_verified`, `phone_number`, `credits`, `rating_score`, `rating_count`, `activation_code`, `salt`, `password`) VALUES ('brinsfield.cole@gmail.com', 'Cole', 'Brinsfield', 0, '6504688601', 1000, 0, 0, 2670, 'GufEzlbsgTs78MLGKp4Y22qQ7fpbORTH', 'YvBXaTYJ/5WprqKrCaB1EojqJRh2foUM\n')
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 5[0m
+  [1m[35mSequel::Mysql2::Database (4.4ms)[0m  COMMIT
+Completed 500 Internal Server Error in 34ms (Models: 6.1ms)
+
+
+  
+NoMethodError (undefined method `dedent' for #<String:0x007f43f802be38>):
+  
+app/controllers/main_controller.rb:49:in `register_post'
+Started POST "/register" for 127.0.0.1 at 2019-01-12 03:50:48 -0800
+Processing by MainController#register_post as HTML
+  Parameters: {"email"=>"brinsfield.cole@gmail.com", "phone_number"=>"6504688601", "first_name"=>"Cole", "last_name"=>"Brinsfield", "password"=>"[FILTERED]", "password2"=>"[FILTERED]", "authenticity_token"=>"7mKfz99HLvcIPdzAXnSQ+m+FzTKNODFDZ4gy10k6FlpMdDCFMJbTehQGKbI0bL0mMHn1W+q4I6Hm6bD9UMcU1A=="}
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE (`email` = 'brinsfield.cole@gmail.com') LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  BEGIN
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mINSERT INTO `users` (`email`, `first_name`, `last_name`, `is_verified`, `phone_number`, `credits`, `rating_score`, `rating_count`, `activation_code`, `salt`, `password`) VALUES ('brinsfield.cole@gmail.com', 'Cole', 'Brinsfield', 0, '6504688601', 1000, 0, 0, 8637, 'LhqPrrqgcFaaGtJYckutYRmfweYULhtd', '2EX9e+jc/DeIIbwIuAycf86Y5cIt/TFZ\n')[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 6
+  [1m[36mSequel::Mysql2::Database (4.7ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 386ms (Models: 5.5ms)
+
+
+  
+Twilio::REST::RestError ([HTTP 404] 20404 : Unable to create record
+The requested resource /2010-04-01/Accounts//Messages.json was not found
+https://www.twilio.com/docs/errors/20404
+
+):
+  
+app/controllers/main_controller.rb:52:in `register_post'
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+Started POST "/register" for 127.0.0.1 at 2019-01-12 03:52:19 -0800
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  DESCRIBE `runs`
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT version()[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  DESCRIBE `users`
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mDESCRIBE `orders`[0m
+Processing by MainController#register_post as HTML
+  Parameters: {"email"=>"brinsfield.cole@gmail.com", "phone_number"=>"6504688601", "first_name"=>"Cole", "last_name"=>"Brinsfield", "password"=>"[FILTERED]", "password2"=>"[FILTERED]", "authenticity_token"=>"7mKfz99HLvcIPdzAXnSQ+m+FzTKNODFDZ4gy10k6FlpMdDCFMJbTehQGKbI0bL0mMHn1W+q4I6Hm6bD9UMcU1A=="}
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE (`email` = 'brinsfield.cole@gmail.com') LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  INSERT INTO `users` (`email`, `first_name`, `last_name`, `is_verified`, `phone_number`, `credits`, `rating_score`, `rating_count`, `activation_code`, `salt`, `password`) VALUES ('brinsfield.cole@gmail.com', 'Cole', 'Brinsfield', 0, '6504688601', 1000, 0, 0, 9101, 'jW3n+lGSWk1+yKQU1UYKn6agFkbHZkef', '+7jZib/QEBbFLkh2R6An7kcLUoimPw6G\n')
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 7[0m
+  [1m[35mSequel::Mysql2::Database (4.2ms)[0m  COMMIT
+Completed 500 Internal Server Error in 388ms (Models: 5.1ms)
+
+
+  
+Twilio::REST::RestError ([HTTP 404] 20404 : Unable to create record
+The requested resource /2010-04-01/Accounts//Messages.json was not found
+https://www.twilio.com/docs/errors/20404
+
+):
+  
+app/controllers/main_controller.rb:52:in `register_post'
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.0ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m

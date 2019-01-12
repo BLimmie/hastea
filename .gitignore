@@ -28,3 +28,4 @@
 
 setup.sh
 /webapp/tmp/*
+/webapp/config/master.key
