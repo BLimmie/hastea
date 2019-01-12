@@ -6,7 +6,6 @@ class MainController < ApplicationController
   def index
   end
   def login
-    p params
     @redirect = params[:redirect] || "/"
     if params[:failed] == "1"
       @alert = "Invalid e-mail address or password."
@@ -26,14 +25,15 @@ class MainController < ApplicationController
     redirect_to "/login"
   end
   def user_edit
-    p Rails.root
   end
   def user_edit_post
-    p Rails.root.to_s
+    @user.email = params[:email]
+    @user.phone_number = params[:phone_number]
+    @user.first_name = params[:first_name]
+    @user.last_name = params[:last_name]
+    @user.set_password(params[:password]) if params[:password] && !params[:password].empty?
 
-    p params
     if params[:avatar]
-      p params[:avatar]
       file = params[:avatar]
       # Create directories if they do not exist already
       Dir.mkdir("./public/uploads/users/#{@user.id}") unless Dir.exist?("./public/uploads/users/#{@user.id}")
@@ -43,6 +43,7 @@ class MainController < ApplicationController
         f.write(file.read)
       end
     end
+    redirect_to "/user/preferences"
   end
   def register_post
     render(plain: "Missing Email") and return if params[:email].nil? || params[:email].empty?
@@ -78,10 +79,7 @@ class MainController < ApplicationController
     render(plain: "Missing email") and return if params[:email].nil? || params[:email].empty?
     render(plain: "Invalid email.") and return unless params[:email] =~ /^\S+@\S+\.\S+$/
     user = User.first(email: params[:email])
-    p user
-    p user.activation_code
-    p params[:activation].to_i
-    p user.activation_code.to_i != params[:activation].to_i
+
     render(plain: "Invalid activation code.") and return if (params[:activation].nil? || !params[:activation].to_i.between?(0,9999))
     render(plain: "Wrong activation code.") and return if (user.activation_code != params[:activation].to_i)
 
@@ -97,7 +95,6 @@ class MainController < ApplicationController
     authenticate!
   end
   def authenticate!
-    p @user
     if @user.nil?
       redirect_to "/login?redirect=#{request.fullpath}"
       return
