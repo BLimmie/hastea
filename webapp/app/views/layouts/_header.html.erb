@@ -40,7 +40,7 @@
                 <li class="nav-item dropdown float-right">
                   <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     <%if File.exist?("./public/uploads/users/#{@user.id}/user_avatar.png") %>
-                      <img class="rounded" style="width:25px;height:25px;" src="../uploads/users/<%= @user.id %>/user_avatar.png">
+                      <img class="rounded-circle" style="width:25px;height:25px;" src="../uploads/users/<%= @user.id %>/user_avatar.png">
                     <%else %>
                       <i class="mr-1 fas fa-user"></i>
                     <%end %>
