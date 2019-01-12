@@ -1,0 +1,229 @@
+/* .alert {
+  margin-top: 80px;
+} */
+.bg-full {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.bg-login {
+  background-color: #1e617a;
+}
+
+.bg-warn {
+  background-color: #B33A3A;
+  color: #f8f9fa !important;
+}
+
+
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: -1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-submit {
+  margin-top: 10px;
+}
+
+.nav-sep {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+
+select {
+  width: 100%;
+}
+
+.vertical-center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.quickfadein {
+  -webkit-animation: fadein .75s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadein .75s; /* Firefox < 16 */
+    -ms-animation: fadein .75s; /* Internet Explorer */
+     -o-animation: fadein .75s; /* Opera < 12.1 */
+        animation: fadein .75s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+label {
+  font-weight: bold;
+}
+.label {
+  color: #f8f9fa !important;
+  height: auto;
+  padding: .5em;
+  box-sizing: border-box;
+  cursor: default;
+  border-radius: .5em;
+  font-size: .75em;
+}
+
+.label-info{
+  background-color: #343a40;
+}
+.label-status-designing {
+  background-color: #38e;
+}
+.label-status-material {
+  background-color: #f77;
+}
+.label-status-ordered {
+  background-color: #f90;
+}
+.label-status-drawing {
+  background-color: #bb0;
+}
+.label-status-ready {
+  background-color: #0bb;
+}
+.label-status-outsourced {
+  background-color: #f06;
+}
+.label-status-manufacturing {
+  background-color: #b0b;
+}
+.label-status-welding {
+  background-color: #99b;
+}
+.label-status-scotchbrite {
+  background-color: #796;
+}
+.label-status-anodize {
+  background-color: #000;
+}
+.label-status-powder {
+  background-color: #00a;
+}
+.label-status-coating {
+  background-color: brown;
+}
+.label-status-assembly {
+  background-color: #666;
+}
+.label-status-done {
+  background-color: #3d6;
+}
+.label-status-received {
+  background-color: #3d6;
+}
+.label-status-open {
+  background-color: #0bb;
+}
+.dashboard-label {
+  padding: 2px 4px;
+  color: #ffffff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.dashboard-part {
+  width: 115px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border: 1px solid black;
+  float: left;
+  margin: 3px;
+  font-weight: bold;
+  color: black;
+}
+.dashboard-status {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.priority-0 {
+  background-color: #fa4;
+}
+.priority-1 {
+  background-color: #4a7;
+}
+.priority-2 {
+  background-color: #aaa;
+}
+.table th a {
+  color: black;
+}
+.well li {
+  list-style: none;
+}

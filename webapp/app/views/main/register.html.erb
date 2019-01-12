@@ -1,0 +1,61 @@
+
+<div class="bg-full bg-login">
+  <div class="container text-center text-light">
+    <form class="form-signin" action="<% if @admin_new_user %>/users<% end %>" method="POST" accept-charset="UTF-8">
+      <h1 class="h3 mb-3 font-weight-normal">Request New Account</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email Address" required autofocus>
+
+      <label for="inputFN" class="sr-only">First Name</label>
+      <input type="text" id="inputFN" class="form-control" name="first_name" placeholder="First Name" required>
+
+      <label for="inputLN" class="sr-only">Last Name</label>
+      <input type="text" id="inputLN" class="form-control" name="last_name" placeholder="Last Name" required>
+
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
+
+      <label for="inputPassword" class="sr-only">Confirm Password</label>
+      <input type="password" id="inputPassword" class="form-control" name="password2" placeholder="Confirm Password" required>
+
+      <% if @admin_new_user %>
+        <label>Permission</label>
+        <select name="permission">
+          <% User::PERMISSION_MAP.each_pair do |key, value| %>
+          <option value="<%= key %>"><%= value %></option>
+          <% end %>
+        </select>
+        <label>Enabled?</label>
+        <input type="checkbox" name="enabled" checked />
+        <br /><br />
+      <% end %>
+
+      <label>
+        <input type="submit" class="form-submit btn btn-success btn-medium" value="Create Account"
+            onclick="return verifyPasswordMatch(this.parentElement.parentElement);" />
+      </label>
+    </form>
+  </div>
+</div>
+
+
+<div class="container">
+  <h2>Create User Account</h2>
+  <form action="<% if @admin_new_user %>/users<% end %>" method="POST">
+    <label>E-mail</label>
+    <input type="text" name="email" />
+    <label>First Name</label>
+    <input type="text" name="first_name" />
+    <label>Last Name</label>
+    <input type="text" name="last_name" />
+    <label>Password</label>
+    <input type="password" name="password" />
+    <label>Verify Password</label>
+    <input type="password" name="password2" />
+
+    <label>
+      <input type="submit" class="btn btn-success btn-medium" value="Create Account"
+          onclick="return verifyPasswordMatch(this.parentElement.parentElement);" />
+    </label>
+  </form>
+</div>

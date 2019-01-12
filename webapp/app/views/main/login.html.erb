@@ -1,0 +1,18 @@
+<% if @alert %>
+  <div class="alert alert-danger">
+    <a class="close" data-dismiss="alert" href="#">×</a><%= @alert %>
+  </div>
+<% end %>
+<div class="bg-full bg-login">
+  <div class="container text-center text-light">
+    <form class="form-signin" action="?redirect=<%= @redirect %>" method="POST" accept-charset="UTF-8">
+      <img class="mb-4" src="/img/logo-basic-2018.png" alt="" width="70%" height="70%">
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email Address" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
+      <button class="btn btn-lg btn-primary btn-block form-submit" type="submit">Sign In</button>
+      <button class="btn btn-lg btn-primary btn-block" onclick="location.href='/register'">Register</button>
+    </form>
+  </div>
+</div>
