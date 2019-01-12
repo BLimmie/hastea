@@ -28,10 +28,11 @@ class MainController < ApplicationController
     render(plain: "Missing first name.") and return if params[:first_name].nil? || params[:first_name].empty?
     render(plain: "Missing last name.") and return if params[:last_name].nil? || params[:last_name].empty?
     render(plain: "Missing password.") and return if params[:password].nil? || params[:password].empty?
+    activation = rand 0..9999
     user = User.new(:email => params[:email], :first_name => params[:first_name],
                     :last_name => params[:last_name], :is_verified => 0,
                     :phone_number => params[:phone_number], :credits => 1000, :rating_score=>0,
-                    :rating_count=>0, :activation_code=>0)
+                    :rating_count=>0, :activation_code=>activation)
     user.set_password(params[:password])
     user.save
     action
@@ -39,13 +40,24 @@ class MainController < ApplicationController
       Hello,
 
       This is a notification that #{user.first_name} #{user.last_name} has created an account on HasTea.
-      If this was you, please use activation code #{user.activation_code} to activate your account at
+      If this was you, please use activation code #{activation_code} to activate your account at url.com/activation
     EOS
     @notice = "We've got your account, but need you to verify your phone number!"
 
   end
   private
 
+  def activation_post
+    render(text: "Missing email", status: 400) and return if params[:email].nil? || params[:email].empty?
+    render(status: 400, text: "Invalid email.") and return unless params[:email] =~ /^\S+@\S+\.\S+$/
+    user = User.first(email:params[:email])
+    render(status: 400, text: "Invalid activation code.") and return if params[:activation].nil? || params[:activation].between?(0,9999)
+    render(status: 400, text: "Wrong activation code.") and return if user.activation_code == params[:activation]
+
+    user.is_verified = 1
+    user.save_changes
+    p user
+    
   def require_login
     @user = User[session[:user_id]]
     authenticate!
