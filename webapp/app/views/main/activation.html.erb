@@ -1,0 +1,13 @@
+<div class="bg-full bg-login">
+  <div class="container text-center text-light">
+    <form class="form-signin" action="?redirect=<%= @redirect %>" method="POST" accept-charset="UTF-8">
+      <img class="mb-4" src="/img/logo-basic-2018.png" alt="" width="70%" height="70%">
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email Address" required autofocus>
+      <label for="inputActivation" class="sr-only">Activation Code</label>
+      <input type="number" id="inputActivation" class="form-control" name="activation" placeholder="Activation Code" required>
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <button class="btn btn-lg btn-primary btn-block form-submit" type="submit">Activate</button>
+    </form>
+  </div>
+</div>
