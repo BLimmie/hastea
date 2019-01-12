@@ -21,6 +21,12 @@ class MainController < ApplicationController
     session[:user_id] = user.id
     redirect_to params[:redirect]
   end
+  def logout
+    session[:user_id] = nil
+    redirect_to "/login"
+  end
+  def user_prefs
+  end
   def register_post
     render(plain: "Missing Email") and return if params[:email].nil? || params[:email].empty?
     render(plain: "Invalid email.") and return unless params[:email] =~ /^\S+@\S+\.\S+$/
@@ -57,7 +63,7 @@ class MainController < ApplicationController
     user.is_verified = 1
     user.save_changes
     p user
-    
+  end
   def require_login
     @user = User[session[:user_id]]
     authenticate!
