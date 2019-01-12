@@ -103,4 +103,11 @@ class MainController < ApplicationController
       redirect "/login?disabled=1"
     end
   end
+  def get_runs
+    return Run.where[status: true].first()
+  end
+  def update
+    @runs = get_runs
+  end
+
 end
