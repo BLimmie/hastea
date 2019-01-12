@@ -1,7 +1,7 @@
 require_relative "../models"
 
 class MainController < ApplicationController
-  before_action :require_login , :except => [:login, :register, :login_post, :register_post]
+  before_action :require_login , :except => [:login, :register, :login_post, :register_post, :activation, :activation_post]
 
   def index
   end
@@ -25,7 +25,20 @@ class MainController < ApplicationController
     session[:user_id] = nil
     redirect_to "/login"
   end
-  def user_prefs
+  def user_edit
+  end
+  def user_edit_post
+    if params[:avatar]
+      p params[:avatar]
+      file = params[:user[avatar]]
+      # Create directories if they do not exist already
+      Dir.mkdir("./uploads/users/#{@user.id}") unless Dir.exist?("./uploads/users/#{@user.id}")
+      # Dir.mkdir("./uploads/users/#{@user.id}/avatar") unless Dir.exist?("./uploads/users/#{@user.id}/avatar")
+      File.delete("./uploads/users/#{@user.id}/user_avatar.png") if File.exist?("./uploads/users/#{@user.id}/user_avatar.png")
+      File.open("./uploads/users/#{@user.id}/user_avatar.png", 'wb') do |f|
+        f.write(file.read)
+      end
+    end
   end
   def register_post
     render(plain: "Missing Email") and return if params[:email].nil? || params[:email].empty?
@@ -50,26 +63,31 @@ class MainController < ApplicationController
 
     client = Twilio::REST::Client.new
       client.messages.create({
-        from: Rails.application.secrets.twilio_phone_number,
+        from: Rails.application.credentials.twilio_phone_number,
         to: '+1'+user.phone_number,
         body: text_body
       })
     @notice = "We've got your account, but need you to verify your phone number!"
 
   end
-  private
-
   def activation_post
-    render(text: "Missing email", status: 400) and return if params[:email].nil? || params[:email].empty?
-    render(status: 400, text: "Invalid email.") and return unless params[:email] =~ /^\S+@\S+\.\S+$/
-    user = User.first(email:params[:email])
-    render(status: 400, text: "Invalid activation code.") and return if params[:activation].nil? || params[:activation].between?(0,9999)
-    render(status: 400, text: "Wrong activation code.") and return if user.activation_code == params[:activation]
+    render(plain: "Missing email") and return if params[:email].nil? || params[:email].empty?
+    render(plain: "Invalid email.") and return unless params[:email] =~ /^\S+@\S+\.\S+$/
+    user = User.first(email: params[:email])
+    p user
+    p user.activation_code
+    p params[:activation].to_i
+    p user.activation_code.to_i != params[:activation].to_i
+    render(plain: "Invalid activation code.") and return if (params[:activation].nil? || !params[:activation].to_i.between?(0,9999))
+    render(plain: "Wrong activation code.") and return if (user.activation_code != params[:activation].to_i)
 
     user.is_verified = 1
     user.save_changes
-    p user
+    redirect_to "/login"
   end
+  private
+
+
   def require_login
     @user = User[session[:user_id]]
     authenticate!

@@ -1,0 +1,36 @@
+
+<div class="container nav-sep">
+  <h2>Edit Preferences</h2>
+  <hr>
+  <form class="form-signin" action="" method="POST">
+    <%if File.exist?("./uploads/users/#{@user.id}/user_avatar.png") %>
+      <img class="rounded" style="width:250px;height:250px;" src="./uploads/user/<%= @user.id %>/user_avatar.png"><br>
+    <%else %>
+      <img class="rounded" style="width:250px;height:250px;" src="/img/avatar_placeholder.png"><br>
+    <%end %>
+    <label>E-mail</label>
+    <input type="text" name="email" value="<%= @user.email %>"/>
+    <label>Phone Number</label><br>
+    <input type="number" name="phone_number" value="<%= @user.phone_number %>"/><br>
+    <label>First Name</label>
+    <input type="text" name="first_name" value="<%= @user.first_name %>"/>
+    <label>Last Name</label>
+    <input type="text" name="last_name" value="<%= @user.last_name %>"/>
+    <label>Change Password</label>
+    <input type="password" name="password" />
+    <label>Verify Password</label>
+    <input type="password" name="password2" />
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <br>
+       <div class="float-right">
+         <label >
+           Upload profile photo <%= file_field(:user, :avatar) %>
+         </label>
+       </div>
+
+    <label>
+      <input type="submit" class="btn btn-primary mt-2" value="Save"
+          onclick="return verifyPasswordMatch(this.parentElement.parentElement);" />
+    </label>
+  </form>
+</div>
