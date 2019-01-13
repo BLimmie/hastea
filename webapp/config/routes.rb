@@ -21,5 +21,6 @@ Rails.application.routes.draw do
   get 'run_edit/:id' => 'main#run_edit'
   post 'run_edit/:id' => 'main#run_edit_post'
   post 'run_state_onwards/:id' => 'main#run_state_onwards'
+  get 'close/:id' => 'main#close'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

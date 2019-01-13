@@ -201,7 +201,13 @@ class MainController < ApplicationController
     end
     run.save
     redirect_to "/run_edit/#{params[:id]}"
-  end 
+  end
+  def close
+    order = Order[params[:id]]
+    order.status = 0
+    order.save
+    redirect_to "/index"
+  end
   private
 
 
