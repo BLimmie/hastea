@@ -16,7 +16,11 @@
       var infowindow;
       var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
       var labelIndex = 0;
-      function initialize() {
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+      async function initialize() {
+        await sleep(1000);
         var ucsb = {lat:34.420870, lng:-119.698340};
         map = new google.maps.Map(document.getElementById('map'), {zoom:12, center:ucsb});
         infowindow = new google.maps.InfoWindow();
@@ -70,6 +74,7 @@
           console.log(document.getElementById('place_id').value);
         });
       }
+
       google.maps.event.addDomListener(window, 'load', initialize);
 
     </script>
