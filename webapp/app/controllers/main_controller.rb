@@ -138,6 +138,15 @@ class MainController < ApplicationController
     comment.save
     redirect_to "/index"
   end
+  def runner_edit_post
+    params.keys.each do |param|
+      if param.match(/^\d+$/)
+        order = Order[param.to_i]
+        order.cost = (params[param].to_f*100).to_i
+        order.save
+      end
+    end
+  end
   private
 
 
