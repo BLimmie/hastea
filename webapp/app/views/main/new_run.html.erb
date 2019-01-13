@@ -1,7 +1,76 @@
-<div class="container nav-sep">
+<div class="container nav-sep" style="width:100%;height:100%;">
   <h2>Start a Run</h2><hr>
-  <div class = "container col-6 float-left">
-    Maps go here
+  <div class = "container col-6 float-left" style="width:100%;height:100%;">
+    <script src="https://apis.google.com/js/api.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      gapi.load('auth2', function() {
+        // Library loaded.
+      });
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%=Rails.application.credentials.maps_api%>&libraries=places"></script>
+
+    <script>
+      var map;
+      var loc;
+      var service;
+      var infowindow;
+      function initialize() {
+        var ucsb = {lat:34.420870, lng:-119.698340};
+        map = new google.maps.Map(document.getElementById('map'), {zoom:12, center:ucsb});
+        infowindow = new google.maps.InfoWindow();
+      }
+
+      function genMap() {
+        var query = document.getElementById('searchnav').value.trim();
+        console.log(query);
+        var request = {
+          query: query,
+          fields: ['geometry']
+        };
+        service = new google.maps.places.PlacesService(map);
+        service.findPlaceFromQuery(request, callback);
+      }
+
+      function callback(results, status){
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+          loc = results[0].geometry.location;
+          map.setCenter(loc);
+          request = {
+            location: {lat: loc.lat(), lng: loc.lng()},
+            radius: 8000,
+            keyword: "boba"
+          };
+          service.nearbySearch(request, callback2);
+        }
+      }
+
+      function callback2(results, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+          for (var i = 0; i < results.length; i++) {
+            var place = results[i];
+            createMarker(results[i]);
+          }
+        }
+      }
+
+      function createMarker(place) {
+        var placeLoc = place.geometry.location;
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.setContent(place.name);
+          infowindow.open(map, this);
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+    <input type="text" class="form-control" id="searchnav"/>
+    <button class="btn btn-sm btn-block" onclick="genMap()">Search</button>
+    <div id="map" style="width:524px;height:524px;"></div>
   </div>
   <div class = "container col-6 float-right">
   <form action="/runs" method="POST">
