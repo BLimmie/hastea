@@ -90,7 +90,7 @@ class MainController < ApplicationController
   def new_order
     render(plain: "Missing order") and return if params[:order_desc].nil? || params[:order_desc].empty?
     render(plain: "Missing run") and return if params[:run_id].nil?
-    order = Order.new(:run_id => params[:run_id], :user_id=>@user.id, :order_desc => params[:order_desc], :status => 0, :cost => 0)
+    order = Order.new(:run_id => params[:run_id], :user_id=>@user.id, :order_desc => params[:order_desc], :status => 1, :cost => 0)
     order.save()
     redirect_to "/index"
   end
@@ -184,15 +184,22 @@ class MainController < ApplicationController
         user = User[order.user_id]
         user.credits -= order.cost
         user.save
+        client.messages.create({
+          from: Rails.application.credentials.twilio_phone_number,
+          to: '+1'+User[order.user_id].phone_number,
+          body: "Hastea Alert:\nRunner "+ User[order.user_id].first_name+" has ordered your drink."
+        })
       end
       run.status = 1
-      run.save
-    elsif run.status == 5
+    elsif run.status == 1
+      Order.where(run_id: run.id).each do |order|
+        render(plain: "All orders must be completed") and return if order.status == 1
+      end
+      run.status = 2
+    elsif run.status == 2
       render(plain: "Run already ended") and return
-    else
-      run.status += 1
-      run.save
     end
+    run.save
     redirect_to "/run_edit/#{params[:id]}"
   end 
   private
