@@ -103,6 +103,7 @@ class MainController < ApplicationController
                   :pickup_addr => params[:address], 
                   :notes => params[:notes])
     p run
+    run.save
     
   end
   private
