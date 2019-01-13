@@ -20,9 +20,12 @@
 }
 
 .bg-login {
-  /* background-color: #95a5a6; */
-  background-image: url("img/background.png");
-  background-position:0px -50px;
+  background-color: rgb(236,218,186);
+
+  background-image: url("img/cloudpatternbg.png");
+  /* background-position: center; */
+  background-position: -15px, 1200px;
+  background-size: cover;
 }
 
 .bg-warn {
