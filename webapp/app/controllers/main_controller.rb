@@ -116,7 +116,7 @@ class MainController < ApplicationController
 
   def new_comment
     comment = Comment.new(:run_id => params[:run_id], :author_id => @user.id, :content => params[:content])
-    
+
     if params[:announce] == '1'
       client = Twilio::REST::Client.new
       if comment.author_id == Run[comment.run_id].runner_id
