@@ -1,32 +1,41 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="bg-full">
   <div class="container">
     <div class="row">
-      <div class="col-4">
-        <div class="list-group" id="list-tab" role="tablist">
+      <div class="col-6">
+        <div class="list-group position-sticky" id="list-tab" role="tablist">
           <a class="list-group-item list-group-item-action active" id="active-orders-tab" data-toggle="list" href="#active-orders" role="tab" aria-controls="home">Active Orders</a>
           <a class="list-group-item list-group-item-action" id="inactive-orders-tab" data-toggle="list" href="#inactive-orders" role="tab" aria-controls="profile">Inactive Orders</a>
         </div>
       </div>
+    </div>
+</div>
+<div class="container">
+  <div class="row">
       <div class="col-8">
         <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+
+          <div class="tab-pane fade show active" id="active-orders" role="tabpanel" aria-labelledby="list-home-list">
             <% Order.where(status: 1).limit(6).each do |order| %>
               <div class="card btn" type="button" style="width: 20rem;" data-toggle="modal" data-target="#"+order.id>
                 <div class="card-body container">
                   <div class="row align-items-center">
                     <div class="col-4 no-gutters align-items-center">
-                      <img src=User.where(id: Run.where(id: order.run_id).runner_id).filename alt="..." class="img-thumbnail">
+                      <%if File.exist?("./public/uploads/users/#{Run[order.run_id].runner_id}/user_avatar.png") %>
+                        <img class="img-thumbnail"  src="../uploads/users/<%= Run[order.run_id].runner_id %>/user_avatar.png">
+                      <%else %>
+                        <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+                      <%end %>
                     </div>
                     <div class="col-7">
                       <div class="row">
-                        <h5 class="card_title text-center"><%= get_business_name Run.where(id: order.run_id).business_id %></h5>
+                        <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].business_id %></h5>
                         <div class="row">
                           <div class="col-5">
-                            <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+                            <p class="card-text">Run[order.run_id].business_id</p>
                           </div>
                           <div class="col-5">
-                            <p class="card-text">order.cost</p>
+                            <p class="card-text">$<%=order.cost/100%>
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -35,11 +44,11 @@
                 </div>
               </div>
 
-              <div class="modal fade" id="orderID" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal fade" id=order.id tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run.where(id: order.run_id).business_id + "delivery" %></h5>
+                      <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run[order.run_id].business_id.to_s + "delivery" %></h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -50,7 +59,7 @@
                           order.order_desc
                         </div>
                         <div class="col-4">
-                          order.cost
+                          $<%=order.cost/100%>
                         </div>
                       </div>
                     </div>
@@ -62,23 +71,30 @@
               </div>
             <% end %>
           </div>
-          <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+
+          <div class="tab-pane fade" id="inactive-orders" role="tabpanel" aria-labelledby="list-profile-list">
             <% Order.where(status: 0).limit(20).each do |order| %>
               <div class="card btn" type="button" style="width: 20rem;" data-toggle="modal" data-target="#"+order.id>
                 <div class="card-body container">
                   <div class="row align-items-center">
                     <div class="col-4 no-gutters align-items-center">
-                      <img src=User.where(id: Run.where(id: order.run_id).runner_id).filename alt="..." class="img-thumbnail">
+                      <%if File.exist?("./public/uploads/users/#{Run[order.run_id].runner_id}/user_avatar.png") %>
+                        <img class="img-thumbnail"  src="../uploads/users/<%= Run[order.run_id].runner_id %>/user_avatar.png">
+                      <%else %>
+                        <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+                      <%end %>
                     </div>
                     <div class="col-7">
                       <div class="row">
-                        <h5 class="card_title text-center"><%= get_business_name Run.where(id: order.run_id).business_id %></h5>
+                        <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].business_id %></h5>
                         <div class="row">
                           <div class="col-5">
-                            <p class="card-text">Run.where(id: order.run_id).bussiness_id</p>
+                            <p class="card-text">Run[order.run_id].business_id</p>
                           </div>
                           <div class="col-5">
-                            <p class="card-text">order.cost</p>
+                            <p class="card-text">
+                               $<%=order.cost/100%>
+                             </p>
                           </div>
                         </div>
                       </div>
@@ -86,12 +102,11 @@
                   </div>
                 </div>
               </div>
-
-              <div class="modal fade" id="orderID" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal fade" id=order.id tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run.where(id: order.run_id).business_id + "delivery" %></h5>
+                      <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run[order.run_id].business_id.to_s + "delivery" %></h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -102,7 +117,7 @@
                           order.order_desc
                         </div>
                         <div class="col-4">
-                          order.cost
+                          $<%=order.cost/100%>
                         </div>
                       </div>
                     </div>
@@ -119,4 +134,4 @@
     </div>
   </div>
 </div>
-</div>
+  </div>

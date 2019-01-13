@@ -87,6 +87,7 @@ class MainController < ApplicationController
     user.save_changes
     redirect_to "/login"
   end
+
   private
 
 
@@ -111,4 +112,7 @@ class MainController < ApplicationController
     @runs = get_runs
   end
 
+end
+def get_business_name (business_id)
+  p "yo"
 end
