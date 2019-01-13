@@ -99,15 +99,15 @@ class MainController < ApplicationController
     render(plain: "Max Orders not set") and return if params[:max_orders].nil?
     render(plain: "Date not set") and return if params[:date].nil?
     render(plain: "Time not set") and return if params[:time].nil?
-    render(plain: "No pickup address set") and return if params[:delivery_method] == "pickup" && params[:address].nil?
+    render(plain: "No destination address set") and return if params[:pickup_addr].nil?
 
     run = Run.new(:runner_id => @user.id,
                   :business_id => params[:business_id],
-                  :datetime => Time.parse(params[:date]+" "+params[:time]),
+                  :datetime => Time.strptime(params[:date]+" "+params[:time], "%m/%d/%Y %l:%M %p"),
                   :order_cap => params[:max_orders],
                   :status => 0,
                   :delivery_method => params[:delivery_method],
-                  :pickup_addr => params[:address],
+                  :pickup_addr => params[:pickup_addr],
                   :notes => params[:notes])
     p run
     run.save
