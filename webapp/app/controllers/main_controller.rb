@@ -113,6 +113,12 @@ class MainController < ApplicationController
     run.save
     redirect_to "/index"
   end
+
+  def new_comment
+    comment = Comment.new(:run_id => params[:run_id], :author_id => @user.id, :content => params[:content])
+    comment.save
+    redirect_to "/index"
+  end
   private
 
 
