@@ -4,12 +4,12 @@ Sequel.migration do
     create_table(:runs) do
       primary_key :id
       Integer :runner_id, :null=>false
-      Integer :bussiness_id, :null=>false
+      String :bussiness_id, :null=>false
       DateTime :datetime, :null=>false
       Integer :order_cap, :null=> false
       Integer :status, :null=>false
       Integer :delivery_method, :null=>false
-      Integer :pickup_addr
+      Text :pickup_addr, :null=>false
       Text :notes
     end
 
