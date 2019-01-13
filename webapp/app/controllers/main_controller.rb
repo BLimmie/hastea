@@ -116,24 +116,23 @@ class MainController < ApplicationController
 
   def new_comment
     comment = Comment.new(:run_id => params[:run_id], :author_id => @user.id, :content => params[:content])
-
+    client = Twilio::REST::Client.new
     if params[:announce] == '1'
-      client = Twilio::REST::Client.new
       if comment.author_id == Run[comment.run_id].runner_id
         Order.where(run_id: comment.run_id).each do |order|
           client.messages.create({
             from: Rails.application.credentials.twilio_phone_number,
             to: '+1'+User[order.user_id].phone_number,
-            body: "Hastea Alert:\nRunner "+ User[order.user_id].first_name+" made a comment on a run you ordered from: "+comment.content
+            body: "Hastea Alert:\nRunner "+ User[comment.author_id].first_name+" made a comment on a run you ordered from: "+comment.content
           })
         end
-      else
+      end
+    elsif comment.author_id != Run[comment.run_id].runner_id
         client.messages.create({
           from: Rails.application.credentials.twilio_phone_number,
           to: '+1'+User[Run[comment.run_id].runner_id].phone_number,
-          body: "Hastea Alert:\nOrderer "+ User[Run[comment.run_id].runner_id].first_name+" made a comment on your run: "+comment.content
+          body: "Hastea Alert:\nOrderer "+ User[comment.author_id].first_name+" made a comment on your run: "+comment.content
         })
-      end
     end
     comment.save
     redirect_to "/index"
@@ -183,12 +182,13 @@ class MainController < ApplicationController
       Order.where(run_id: run.id).each do |order|
         user = User[order.user_id]
         user.credits -= order.cost
-        user.save
+        client = Twilio::REST::Client.new
         client.messages.create({
           from: Rails.application.credentials.twilio_phone_number,
           to: '+1'+User[order.user_id].phone_number,
-          body: "Hastea Alert:\nRunner "+ User[order.user_id].first_name+" has ordered your drink."
+          body: "Hastea Alert:\nRunner "+ User[run.runner_id].first_name+" has ordered your drink."
         })
+        user.save
       end
       run.status = 1
     elsif run.status == 1
@@ -205,6 +205,9 @@ class MainController < ApplicationController
   def close
     order = Order[params[:id]]
     order.status = 0
+    runner = User[Run[order.run_id].runner_id]
+    runner.credits += order.cost
+    runner.save
     order.save
     redirect_to "/index"
   end

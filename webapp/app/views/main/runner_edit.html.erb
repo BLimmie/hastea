@@ -2,7 +2,7 @@
   <div class="container nav-sep">
     <form action="/runner_edit" method="POST">
       <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-      <% Run.where(runner_id: @user.id,status: [0, 1, 2, 3, 4] ).each do |run| %>
+      <% Run.where(runner_id: @user.id,status: [0, 1] ).each do |run| %>
         <div class="card" style="width: 100%;">
           <div class="card-body">
             <h5 class="card-title"><%= get_business_name(run.business_id)%></h5>
@@ -29,7 +29,7 @@
           </div>
         </div>
       <%end%>
-      <input type="submit" class="btn btn-primary float-right">Save</input>
+      <input type="submit" class="btn btn-primary float-right" value="Update"></input>
     </form>
   </div>
 </div>
