@@ -6,7 +6,7 @@
 
         <% if (Run.where(status: 0).count > 0) %>
           <% Run.where(status: 0).limit(4).each do |run| %>
-            <div class="card btn" type="button" style="width: 22rem;" data-toggle="modal" data-target="#Run_Modal">
+            <div class="card btn" type="button" style="width: 22rem;" data-toggle="modal" data-target=#Run_Modal<%=run.id%>>
               <div class="card-body container">
                 <div class="row  ">
                   <div class="col-4 no-gutters align-items-center">
@@ -20,7 +20,7 @@
                     <div class="row">
                       <div class="col-6">
                         <div class="row">
-                          <h5 class="card_title">run.bussiness_id</h5>
+                          <h5 class="card_title"><%=get_business_name(run.business_id)%></h5>
                         </div>
                         <div class="row mt-1">
                           <i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i
@@ -56,7 +56,7 @@
       <div class="col-6">
         <h2>My Current Active Orders</h2>
         <% Order.where(status: 1).limit(6).each do |order| %>
-          <div class="card btn" type="button" style="width: 20rem;" data-toggle="modal" data-target="#"+order.id>
+          <div class="card btn" type="button" style="width: 20rem;" data-toggle="modal" data-target=#order_modal<%=order.id%>>
             <div class="card-body container">
               <div class="row align-items-center">
                 <div class="col-4 no-gutters align-items-center">
@@ -67,10 +67,10 @@
                     <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].business_id %></h5>
                     <div class="row">
                       <div class="col-5">
-                        <p class="card-text">Run[id: order.run_id].bussiness_id</p>
+                        <p class="card-text"><%= get_business_name(Run[order.run_id].business_id) %></p>
                       </div>
                       <div class="col-5">
-                        <p class="card-text">order.cost</p>
+                        <p class="card-text"><%=order.cost%></p>
                       </div>
                     </div>
                   </div>
@@ -85,7 +85,7 @@
 </div>
 
 <% Run.where(status: 0).limit(4).each do |run| %>
-  <div class="modal fade" id="Run_Modal" tabindex="-1" role="dialog">
+  <div class="modal fade" id=Run_Modal<%=run.id%> tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
 
       <div class="modal-content modal-lg">
@@ -100,7 +100,7 @@
           <%end %>
 
           <h5 class="modal-title" id="exampleModalLabel">
-            Users[run.runner_id].first_name + " is delivering " + get_business_id run.business_id + " to " + run.pickup_addr
+            <%=User[run.runner_id].first_name + " is delivering " + get_business_name(run.business_id) + " to " + run.pickup_addr%>
           </h5>
 
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -218,7 +218,7 @@
 <% end %>
 
 <% Order.where(status: 1).limit(6).each do |order| %>
-  <div class="modal fade" id="order_modal" tabindex="-1" role="dialog">
+  <div class="modal fade" id=order_modal<%=order.id%> tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
 
       <div class="modal-content modal-lg">
@@ -226,14 +226,14 @@
         <div class="modal-header">
 
           <!--contains pfp followed by a few other things -->
-          <%if File.exist?("./public/uploads/users/#{order.user_id}/user_avatar.png") %>
-            <img class="img-thumbnail"  src="../uploads/users/<%= order.user_id %>/user_avatar.png">
+          <%if File.exist?("./public/uploads/users/#{run.runner_id}/user_avatar.png") %>
+            <img class="img-thumbnail"  src="../uploads/users/<%= run.runner_id %>/user_avatar.png">
           <%else %>
             <img class="img-thumbnail" src="/img/avatar_placeholder.png">
           <%end %>
-
+          
           <h5 class="modal-title" id="OrderModalLabel">
-            <%= "You have one order from " + User[order.user_id].first_name + ", it is currently in " + Run::RUN_STATUS[Run[order.run_id].status] +"." %>
+            <%= "You have one order from " + User[order.user_id].first_name + ", it is on the way." %>
           </h5>
 
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -259,7 +259,7 @@
                   <dd class="col-sm-9"><%=Run[order.run_id].datetime.strftime("%I:%M")%></dd>
 
                   <dt class="col-sm-3">Delivery Method: </dt>
-                  <% if Run[order.run_id].delivery_method ==0 %>
+                  <% if (Run[order.run_id].delivery_method == 0) %>
                     <dd class="col-sm-9">
                       <p>Pickup</p>
                       <p><%=run.Address%></p>
@@ -272,11 +272,7 @@
               <div class="col">
                 <dl class="row">
                   <dt class="col-sm-3">What: </dt>
-                  <dd class="col-sm-9"><%= get_business_name Run[order.run_id].business_id %></dd>
-                  <p></p>
-                  <p></p>
-                  <dt class="col-sm-3">Special Notes:</dt>
-                  <dd class="col-sm-9"><% order.order_desc %></dd>
+                  <dd class="col-sm-9"><%= get_business_name(Run[order.run_id].business_id) %></dd>
                 </dl>
               </div>
             </div>
