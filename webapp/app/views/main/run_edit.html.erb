@@ -1,13 +1,13 @@
-
+<div class="bg-full">
 <div class="container nav-sep">
-  <h2>Mark Boba as Picked Up:</h2>
-  <hr>
+  <h2 style="color:white;">Mark Boba as Picked Up:</h2>
+  <hr style="color:white;">
   <form method="POST" action="/run_edit/<%=params[:id]%>" enctype="multipart/form-data">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   <div class="container">
     <div class="row">
-      <label class="col-6" > Picture of Drinks </label>
-      <label class="col-6" > Picture of Receipt </label>
+      <label class="col-6" style="color:white;" > Picture of Drinks </label>
+      <label class="col-6" style="color:white;"> Picture of Receipt </label>
     </div>
     <div class="row">
       <div class="col-6">
@@ -22,19 +22,19 @@
       </div>
     </div>
     <div class="row">
-      <input name = "drinks" type="file" class="col-6" > Picture of Drinks </label>
-      <input name = "receipt" type="file" class="col-6" > Picture of Receipt </label>
+      <input style="color:white;" name = "drinks" type="file" class="col-6" > <span style="color:white;"> Picture of Drinks </span >
+      <input style="color:white;" name = "receipt" type="file" class="col-6" ><span style="color:white;"> Picture of Receipt </span>
     </div>
     <br>
     <div class="row">
-      <button type="submit">Save</button>
+      <button type="submit" class="btn btn-success btn-medium">Save</button>
     </div>
   </div>
   </form>
   <br><br>
   <div class="container">
     <div class="row">
-      <label>Status: <%=Run[params[:id]].status%></label>
+      <label style="color:white;">Status: <%=Run::RUN_STATUS[Run[params[:id]].status]%></label>
     </div>
   </div>
   <br><br>
@@ -42,8 +42,9 @@
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   <div class="container">
     <div class="row">
-      <button type="submit">Next Stage</button>
+      <button type="submit" class="btn btn-success btn-medium">Next Stage</button>
     </div>
   </div>
   </form>
+</div>
 </div>
