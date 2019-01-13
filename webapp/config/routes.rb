@@ -18,5 +18,8 @@ Rails.application.routes.draw do
   post 'new_comment' => 'main#new_comment'
   get 'runner_edit' => 'main#runner_edit'
   post 'runner_edit' => 'main#runner_edit_post'
+  get 'run_edit/:id' => 'main#run_edit'
+  post 'run_edit/:id' => 'main#run_edit_post'
+  post 'run_state_onwards/:id' => 'main#run_state_onwards'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

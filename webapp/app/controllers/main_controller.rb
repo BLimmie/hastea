@@ -147,6 +147,54 @@ class MainController < ApplicationController
       end
     end
   end
+  def run_edit
+  end
+  def run_edit_post
+    if params[:drinks]
+      file = params[:drinks]
+      # Create directories if they do not exist already
+      Dir.mkdir("./public/uploads/runs/#{params[:id]}") unless Dir.exist?("./public/uploads/runs/#{params[:id]}")
+      # Dir.mkdir("./public/uploads/users/#{@user.id}/avatar") unless Dir.exist?("./public/uploads/users/#{@user.id}/avatar")
+      File.delete("./public/uploads/runs/#{params[:id]}/drinks.png") if File.exist?("./public/uploads/runs/#{params[:id]}/drinks.png")
+      File.open("./public/uploads/runs/#{params[:id]}/drinks.png", 'wb') do |f|
+        f.write(file.read)
+      end
+    end
+    if params[:receipt]
+      file = params[:receipt]
+      # Create directories if they do not exist already
+      Dir.mkdir("./public/uploads/runs/#{params[:id]}") unless Dir.exist?("./public/uploads/runs/#{params[:id]}")
+      # Dir.mkdir("./public/uploads/users/#{@user.id}/avatar") unless Dir.exist?("./public/uploads/users/#{@user.id}/avatar")
+      File.delete("./public/uploads/runs/#{params[:id]}/receipt.png") if File.exist?("./public/uploads/runs/#{params[:id]}/receipt.png")
+      File.open("./public/uploads/runs/#{params[:id]}/receipt.png", 'wb') do |f|
+        f.write(file.read)
+      end
+    end
+    redirect_to "/run_edit/#{params[:id]}"
+  end
+  def run_state_onwards
+    run = Run[params[:id]]
+    if run.status == 0
+      render(plain: "No Drinks Picture") and return if not File.exist?("./public/uploads/runs/#{params[:id]}/drinks.png")
+      render(plain: "No Receipt Picture") and return if not File.exist?("./public/uploads/runs/#{params[:id]}/receipt.png")
+      Order.where(run_id: run.id).each do |order|
+        render(plain: "Cost of all orders has to be more than 0") and return if order.cost <= 0
+      end
+      Order.where(run_id: run.id).each do |order|
+        user = User[order.user_id]
+        user.credits -= order.cost
+        user.save
+      end
+      run.status = 1
+      run.save
+    elsif run.status == 5
+      render(plain: "Run already ended") and return
+    else
+      run.status += 1
+      run.save
+    end
+    redirect_to "/run_edit/#{params[:id]}"
+  end 
   private
 
 
