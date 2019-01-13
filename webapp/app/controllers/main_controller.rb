@@ -111,7 +111,7 @@ class MainController < ApplicationController
                   :notes => params[:notes])
     p run
     run.save
-
+    redirect_to "/index"
   end
   private
 
@@ -139,5 +139,6 @@ class MainController < ApplicationController
 
 end
 def get_business_name (business_id)
-  p "yo"
+  @client = GooglePlaces::Client.new(Rails.application.credentials.maps_api)
+  @client.spot(business_id).name
 end
