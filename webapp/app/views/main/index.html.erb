@@ -117,7 +117,7 @@
               <div class="col">
                 <dl class="row">
                   <dt class="col-sm-3">Who: </dt>
-                  <dd class="col-sm-9"><%=Users[run.runner_id].first_name + " " + Users[run.runner_id].last_name%></dd>
+                  <dd class="col-sm-9"><%=User[run.runner_id].first_name + " " + User[run.runner_id].last_name%></dd>
 
                   <dt class="col-sm-3">Where: </dt>
                   <dd class="col-sm-9"><%=run.pickup_addr%></dd>
@@ -142,11 +142,11 @@
                   <dd class="col-sm-9"><%= get_business_name run.business_id %></dd>
 
                   <dt class="col-sm-3">People Registered:</dt>
-                  <dd class="col-sm-9"><%= Order.where(run_id: run.run_id).count + "/" + run.order_cap%></dd>
+                  <dd class="col-sm-9"><%= Order.where(run_id: run.id).count.to_s + "/" + run.order_cap.to_s%></dd>
                                            <p></p>
               <p></p>
                                            <dt class="col-sm-3">Special Notes:</dt>
-              <dd class="col-sm-9"><% Run.notes %></dd>
+              <dd class="col-sm-9"><% run.notes %></dd>
                 </dl>
               </div>
             </div>
