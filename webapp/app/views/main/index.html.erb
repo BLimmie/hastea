@@ -4,9 +4,9 @@
       <div class="col-6 align-items-center">
         <h2>Active Boba Runs</h2>
 
-        <% if (Run.where(status: 1).count > 0) %>
-          <% Run.where(status: 1).limit(4).each do |run| %>
-            <div class="card btn" type="button" style="width: 20rem;" data-toggle="modal" data-target="#exampleModal">
+        <% if (Run.where(status: 0).count > 0) %>
+          <% Run.where(status: 0).limit(4).each do |run| %>
+            <div class="card btn" type="button" style="width: 20rem;" data-toggle="modal" data-target="#Run_Modal">
               <div class="card-body container">
                 <div class="row  ">
                   <div class="col-4 no-gutters align-items-center">
