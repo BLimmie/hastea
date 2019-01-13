@@ -116,6 +116,27 @@ class MainController < ApplicationController
 
   def new_comment
     comment = Comment.new(:run_id => params[:run_id], :author_id => @user.id, :content => params[:content])
+    
+    if params[:announce] == '1'
+      client = Twilio::REST::Client.new
+      if comment.author_id == Run[comment.run_id].runner_id
+        p "here"
+        Order.where(run_id: comment.run_id).each do |order|
+          p order.user_id
+          client.messages.create({
+            from: Rails.application.credentials.twilio_phone_number,
+            to: '+1'+User[order.user_id].phone_number,
+            body: "Hastea Alert:\nRunner "+ User[order.user_id].first_name+" made a comment on a run you ordered from: "+comment.content
+          })
+        end
+      else
+        client.messages.create({
+          from: Rails.application.credentials.twilio_phone_number,
+          to: '+1'+User[Run[comment.run_id].runner_id].phone_number,
+          body: "Hastea Alert:\nOrderer "+ User[Run[comment.run_id].runner_id].first_name+" made a comment on your run: "+comment.content
+        })
+      end
+    end
     comment.save
     redirect_to "/index"
   end
