@@ -84,7 +84,7 @@
   </div>
 </div>
 
-<% Run.where(status: 1).limit(4).each do |run| %>
+<% Run.where(status: 0).limit(4).each do |run| %>
   <div class="modal fade" id="Run_Modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
 
