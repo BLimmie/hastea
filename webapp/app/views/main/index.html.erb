@@ -169,6 +169,38 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
+        <div class="row">
+          <div class="col-10">
+          <h5>Discussion:</h5><hr>
+          </div>
+
+        </div>
+        <div class="row">
+
+          <% if !Order.where(run_id: run.id, user_id: @user.id).empty? %>
+          <div class="col-10"> New Comment: </div>
+          <button class="btn"><i class="col-2 fas fa-pencil-alt"></i></btn>
+
+          <% end %>
+        </div>
+
+        <div class="container">
+          <% Comment.where(run_id: run.id).order(:id).each do |comment| %>
+          <div class="row">
+            <%if File.exist?("./public/uploads/users/#{comment.author_id}/user_avatar.png") %>
+              <img class="rounded-circle col-1" style="width:25px;height:25px;" src="../uploads/users/<%= comment.author_id %>/user_avatar.png">
+            <%else %>
+              <i class="col-1 mr-1 fas fa-user"></i>
+            <%end %>
+            <div class="col-2">
+              <%=User[comment.author_id].first_name%>
+            </div>
+            <div class="col-9">
+              <%=comment.content%>
+            </div>
+          </div>
+          <%end%>
+        </div>
       </div>
     </div>
   </div>
