@@ -82,6 +82,12 @@
     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     <input type="hidden" name="business_id" id="place_id"/>
     <div class="form-row">
+      <label class="float-left col-12">Running to?</label>
+    </div>
+    <div class="form-row">
+      <input type="text" class="form-control" name="pickup_addr"></input>
+    </div>
+    <div class="form-row">
       <div class="col-6">
         <label class="float-left">Delivery Method</label>
       </div>
@@ -92,8 +98,8 @@
     <div class="form-row">
       <div class="col-6">
         <select class="form-control" name="delivery_method">
-          <option value="pickup" selected>Pick Up</option>
-          <option value="delivery">Delivery</option>
+          <option value="1" selected>Pick Up</option>
+          <option value="0">Delivery</option>
         </select>
       </div>
       <div class="col-4">
@@ -112,7 +118,7 @@
         <div class="col-6">
             <div class="form-group">
                 <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
-                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
+                    <input type="text" name="date" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
                     <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
                         <div class="input-group-text"><i class="far fa-calendar"></i></div>
                     </div>
@@ -130,7 +136,7 @@
         <div class="col-6">
             <div class="form-group">
                 <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
-                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker2"/>
+                    <input type="text" name="time" class="form-control datetimepicker-input" data-target="#datetimepicker2"/>
                     <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
                         <div class="input-group-text"><i class="far fa-clock"></i></div>
                     </div>
@@ -152,7 +158,7 @@
       <label class="float-left">Notes</label>
     </div>
     <div class="col-12">
-      <textarea class="form-control" style="width: 100%;" name="notes" rows="4"></textarea>
+      <textarea class="form-control" name="notes" style="width: 100%;" name="notes" rows="4"></textarea>
     </div>
   </div>
     <div class="form-row">
