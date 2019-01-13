@@ -63,7 +63,7 @@ class MainController < ApplicationController
     Hello,
 
     This is a notification that #{user.first_name} #{user.last_name} has created an account on HasTea.
-    If this was you, please use activation code #{user.activation_code} to activate your account at url.com/activation
+    If this was you, please use activation code #{user.activation_code} to activate your account at hastea.org/activation
     EOS
 
     client = Twilio::REST::Client.new
