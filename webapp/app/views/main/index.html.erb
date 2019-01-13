@@ -182,14 +182,29 @@
           </div>
 
         </div>
+        <% if !Order.where(run_id: run.id, user_id: @user.id).empty? || run.runner_id == @user.id %>
+        <form action="/new_comment" method="POST">
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
         <div class="row">
 
-          <% if !Order.where(run_id: run.id, user_id: @user.id).empty? %>
           <div class="col-10"> New Comment: </div>
-          <button class="btn"><i class="col-2 fas fa-pencil-alt"></i></btn>
+          <button class="submit"><i class="col-2 fas fa-pencil-alt"></i></btn>
 
-          <% end %>
         </div>
+        <input type="hidden" name="run_id" value=<%=run.id%>>
+        <div class="row">
+          <input type="text" class="form-control col-8" name="content"></input>
+          <% if @user.id == run.runner_id %>
+            <select class="form-control col-4" name="announce">
+              <option value="1" selected> Announce to Users </option>
+              <option value="0"> Don't Announce </option>
+            </select>
+          <%end%>
+        </div>
+        </form>
+        <% end %>
+
 
         <div class="container">
           <% Comment.where(run_id: run.id).order(:id).each do |comment| %>
