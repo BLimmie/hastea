@@ -165,5 +165,6 @@ class MainController < ApplicationController
 end
 def get_business_name (business_id)
   @client = GooglePlaces::Client.new(Rails.application.credentials.maps_api)
-  @client.spot(business_id).name
+  spot = @client.spot(business_id)
+  spot.name
 end
