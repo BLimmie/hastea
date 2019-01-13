@@ -36290,3 +36290,495 @@ Processing by MainController#index as HTML
 Completed 200 OK in 196ms (Views: 77.3ms | Models: 113.1ms)
 
 
+Started GET "/index" for 127.0.0.1 at 2019-01-12 20:29:01 -0800
+Processing by MainController#index as HTML
+  [1m[35mSequel::Mysql2::Database (129.5ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (7.6ms)[0m  [1mSELECT count(*) AS `count` FROM `runs` WHERE (`status` = 0) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (2.9ms)[0m  SELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4
+  [1m[36mSequel::Mysql2::Database (3.5ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.8ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (1.2ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (1.6ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  Rendered main/index.html.erb within layouts/application (111.1ms)
+  Rendered layouts/_header.html.erb (5.5ms)
+Completed 200 OK in 654ms (Views: 414.9ms | Models: 148.5ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2019-01-12 20:30:30 -0800
+Processing by MainController#index as HTML
+  [1m[35mSequel::Mysql2::Database (112.6ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (2.0ms)[0m  [1mSELECT count(*) AS `count` FROM `runs` WHERE (`status` = 0) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (1.2ms)[0m  SELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (3.1ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  Rendered main/index.html.erb within layouts/application (46.7ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 368ms (Views: 230.4ms | Models: 121.5ms)
+
+
+Started POST "/orders/new" for 127.0.0.1 at 2019-01-12 20:30:36 -0800
+Processing by MainController#new_order as HTML
+  Parameters: {"authenticity_token"=>"NVsC019cyxitPlKMU6TzJC85JGZpOPCAxizcRoQvHwSuRk4scp04mQlz5TD+7phsQJoIK03GLgsjMt2Vh7pYog==", "run_id"=>"1", "order_desc"=>"1234"}
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (2.8ms)[0m  [1mBEGIN[0m
+  [1m[35mSequel::Mysql2::Database (16.9ms)[0m  INSERT INTO `orders` (`run_id`, `user_id`, `order_desc`, `status`, `cost`) VALUES (1, 1, '1234', 1, 0)
+  [1m[36mSequel::Mysql2::Database (2.0ms)[0m  [1mSELECT * FROM `orders` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (10.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/index
+Completed 302 Found in 69ms (Models: 33.2ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2019-01-12 20:30:37 -0800
+Processing by MainController#index as HTML
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  Rendering main/index.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (4.8ms)[0m  SELECT count(*) AS `count` FROM `runs` WHERE (`status` = 0) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (1.2ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.9ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (3.7ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (1.0ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+Started POST "/orders/new" for 127.0.0.1 at 2019-01-12 20:30:37 -0800
+Processing by MainController#new_order as HTML
+  Parameters: {"authenticity_token"=>"NVsC019cyxitPlKMU6TzJC85JGZpOPCAxizcRoQvHwSuRk4scp04mQlz5TD+7phsQJoIK03GLgsjMt2Vh7pYog==", "run_id"=>"1", "order_desc"=>"1234"}
+  [1m[35mSequel::Mysql2::Database (100.1ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (96.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSequel::Mysql2::Database (99.4ms)[0m  INSERT INTO `orders` (`run_id`, `user_id`, `order_desc`, `status`, `cost`) VALUES (1, 1, '1234', 1, 0)
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE `id` = 2[0m
+  [1m[35mSequel::Mysql2::Database (58.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/index
+Completed 302 Found in 360ms (Models: 354.7ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2019-01-12 20:30:37 -0800
+Processing by MainController#index as HTML
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  Rendered main/index.html.erb within layouts/application (913.7ms)
+  Rendering main/index.html.erb within layouts/application
+Completed 500 Internal Server Error in 923ms (Models: 14.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `run' for #<#<Class:0x00007fe01010ac28>:0x00007fe0141d1b80>):
+    194:         <div class="modal-header">
+    195: 
+    196:           <!--contains pfp followed by a few other things -->
+    197:           <%if File.exist?("./public/uploads/users/#{run.runner_id}/user_avatar.png") %>
+    198:             <img class="img-thumbnail"  src="../uploads/users/<%= run.runner_id %>/user_avatar.png">
+    199:           <%else %>
+    200:             <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+  
+app/views/main/index.html.erb:197:in `block in _app_views_main_index_html_erb__2573236433402629712_70300193428080'
+app/views/main/index.html.erb:188:in `_app_views_main_index_html_erb__2573236433402629712_70300193428080'
+  [1m[35mSequel::Mysql2::Database (88.0ms)[0m  SELECT count(*) AS `count` FROM `runs` WHERE (`status` = 0) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (99.7ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (106.9ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (5.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (1.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4
+  [1m[36mSequel::Mysql2::Database (5.7ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (91.3ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (4.7ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  Rendered main/index.html.erb within layouts/application (1214.0ms)
+Completed 500 Internal Server Error in 1390ms (Models: 405.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `run' for #<#<Class:0x00007fe01010ac28>:0x00007fe0141f1fc0>):
+    194:         <div class="modal-header">
+    195: 
+    196:           <!--contains pfp followed by a few other things -->
+    197:           <%if File.exist?("./public/uploads/users/#{run.runner_id}/user_avatar.png") %>
+    198:             <img class="img-thumbnail"  src="../uploads/users/<%= run.runner_id %>/user_avatar.png">
+    199:           <%else %>
+    200:             <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+  
+app/views/main/index.html.erb:197:in `block in _app_views_main_index_html_erb__2573236433402629712_70300193494440'
+app/views/main/index.html.erb:188:in `_app_views_main_index_html_erb__2573236433402629712_70300193494440'
+Started GET "/index" for 127.0.0.1 at 2019-01-12 20:30:41 -0800
+Processing by MainController#index as HTML
+  [1m[36mSequel::Mysql2::Database (3.4ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  Rendering main/index.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (18.7ms)[0m  SELECT count(*) AS `count` FROM `runs` WHERE (`status` = 0) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (1.9ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4
+  [1m[36mSequel::Mysql2::Database (1.2ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  Rendered main/index.html.erb within layouts/application (543.0ms)
+Completed 500 Internal Server Error in 560ms (Models: 28.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `run' for #<#<Class:0x00007fe01010ac28>:0x00007fe00402dff0>):
+    194:         <div class="modal-header">
+    195: 
+    196:           <!--contains pfp followed by a few other things -->
+    197:           <%if File.exist?("./public/uploads/users/#{run.runner_id}/user_avatar.png") %>
+    198:             <img class="img-thumbnail"  src="../uploads/users/<%= run.runner_id %>/user_avatar.png">
+    199:           <%else %>
+    200:             <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+  
+app/views/main/index.html.erb:197:in `block in _app_views_main_index_html_erb__2573236433402629712_70300058350780'
+app/views/main/index.html.erb:188:in `_app_views_main_index_html_erb__2573236433402629712_70300058350780'
+Started GET "/" for 127.0.0.1 at 2019-01-12 20:31:29 -0800
+Started GET "/index" for 127.0.0.1 at 2019-01-12 20:31:29 -0800
+Processing by MainController#index as HTML
+  [1m[36mSequel::Mysql2::Database (71.4ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  Rendering main/index.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (3.5ms)[0m  SELECT count(*) AS `count` FROM `runs` WHERE (`status` = 0) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (1.5ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  Rendered main/index.html.erb within layouts/application (472.1ms)
+Completed 500 Internal Server Error in 568ms (Models: 80.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `run' for #<#<Class:0x00007fe01010ac28>:0x00007fe004233b10>):
+    194:         <div class="modal-header">
+    195: 
+    196:           <!--contains pfp followed by a few other things -->
+    197:           <%if File.exist?("./public/uploads/users/#{run.runner_id}/user_avatar.png") %>
+    198:             <img class="img-thumbnail"  src="../uploads/users/<%= run.runner_id %>/user_avatar.png">
+    199:           <%else %>
+    200:             <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+  
+app/views/main/index.html.erb:197:in `block in _app_views_main_index_html_erb__2573236433402629712_70300059419200'
+app/views/main/index.html.erb:188:in `_app_views_main_index_html_erb__2573236433402629712_70300059419200'
+  [1m[36mSequel::Mysql2::Database (90.1ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (3.5ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.9ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[35mSequel::Mysql2::Database (2.4ms)[0m  SET NAMES utf8
+  [1m[36mSequel::Mysql2::Database (1.6ms)[0m  [1mSET @@wait_timeout = 2147483[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET SQL_AUTO_IS_NULL=0
+  [1m[36mSequel::Mysql2::Database (305.8ms)[0m  [1mCREATE TABLE `comments` (`id` int(11) PRIMARY KEY AUTO_INCREMENT, `run_id` int(11), `author_id` int(11), `content` text)[0m
+  [1m[35mSequel::Mysql2::Database (31.7ms)[0m  CREATE TABLE `orders` (`id` int(11) PRIMARY KEY AUTO_INCREMENT, `run_id` int(11), `user_id` int(11), `order_desc` text, `status` int(11), `cost` int(11))
+  [1m[36mSequel::Mysql2::Database (387.4ms)[0m  [1mCREATE TABLE `runs` (`id` int(11) PRIMARY KEY AUTO_INCREMENT, `runner_id` int(11) NOT NULL, `business_id` varchar(255) NOT NULL, `datetime` datetime NOT NULL, `order_cap` int(11) NOT NULL, `status` int(11) NOT NULL, `delivery_method` int(11) NOT NULL, `pickup_addr` text NOT NULL, `notes` text)[0m
+  [1m[35mSequel::Mysql2::Database (12.9ms)[0m  CREATE TABLE `schema_migrations` (`filename` varchar(255) NOT NULL, PRIMARY KEY (`filename`))
+  [1m[36mSequel::Mysql2::Database (10.9ms)[0m  [1mCREATE TABLE `users` (`id` int(11) PRIMARY KEY AUTO_INCREMENT, `phone_number` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `is_verified` int(11) NOT NULL, `first_name` varchar(255) NOT NULL, `last_name` varchar(255) NOT NULL, `activation_code` int(11) NOT NULL, `credits` int(11) NOT NULL, `rating_score` int(11) NOT NULL, `rating_count` int(11) NOT NULL, `password` varchar(255) NOT NULL, `salt` varchar(255) NOT NULL)[0m
+  [1m[35mSequel::Mysql2::Database (20.9ms)[0m  CREATE UNIQUE INDEX `email` ON `users` (`email`)
+  [1m[36mSequel::Mysql2::Database (7.7ms)[0m  [1mCREATE UNIQUE INDEX `phone_number` ON `users` (`phone_number`)[0m
+  [1m[35mSequel::Mysql2::Database (3.7ms)[0m  INSERT INTO `schema_migrations` (`filename`) VALUES ('20190112070001_create_users.rb')
+  [1m[36mSequel::Mysql2::Database (2.2ms)[0m  [1mINSERT INTO `schema_migrations` (`filename`) VALUES ('20190112072930_create_runs.rb')[0m
+  [1m[35mSequel::Mysql2::Database (5.1ms)[0m  INSERT INTO `schema_migrations` (`filename`) VALUES ('20190112113003_create_orders.rb')
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (`filename`) VALUES ('20190112224130_create_comments.rb')[0m
+  [1m[35mSequel::Mysql2::Database (1.9ms)[0m  SET NAMES utf8
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSET @@wait_timeout = 2147483[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SET SQL_AUTO_IS_NULL=0
+  [1m[36mSequel::Mysql2::Database (1.1ms)[0m  [1mSELECT version()[0m
+  [1m[35mSequel::Mysql2::Database (2.2ms)[0m  SELECT NULL AS `nil` FROM `schema_migrations` LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `schema_migrations` LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT `filename` FROM `schema_migrations` ORDER BY `filename`
+  [1m[36mSequel::Mysql2::Database (1.5ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (1.7ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[35mSequel::Mysql2::Database (1.3ms)[0m  SET NAMES utf8
+  [1m[36mSequel::Mysql2::Database (1.2ms)[0m  [1mSET @@wait_timeout = 2147483[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET SQL_AUTO_IS_NULL=0
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT version()[0m
+  [1m[35mSequel::Mysql2::Database (0.9ms)[0m  SELECT NULL AS `nil` FROM `schema_migrations` LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `schema_migrations` LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT `filename` FROM `schema_migrations` ORDER BY `filename`
+  [1m[36mSequel::Mysql2::Database (4.0ms)[0m  [1mSHOW FULL TABLES[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT version()
+  [1m[36mSequel::Mysql2::Database (11.5ms)[0m  [1mSELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'comments') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`[0m
+  [1m[35mSequel::Mysql2::Database (6.2ms)[0m  SELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'orders') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`
+  [1m[36mSequel::Mysql2::Database (2.0ms)[0m  [1mSELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'runs') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`[0m
+  [1m[35mSequel::Mysql2::Database (5.2ms)[0m  SELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'schema_migrations') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`
+  [1m[36mSequel::Mysql2::Database (1.6ms)[0m  [1mSELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'users') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`[0m
+  [1m[35mSequel::Mysql2::Database (6.4ms)[0m  DESCRIBE `comments`
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSHOW INDEX FROM `comments`[0m
+  [1m[35mSequel::Mysql2::Database (1.0ms)[0m  SELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'comments') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`
+  [1m[36mSequel::Mysql2::Database (2.6ms)[0m  [1mDESCRIBE `orders`[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SHOW INDEX FROM `orders`
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'orders') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`[0m
+  [1m[35mSequel::Mysql2::Database (5.5ms)[0m  DESCRIBE `runs`
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSHOW INDEX FROM `runs`[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'runs') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mDESCRIBE `schema_migrations`[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SHOW INDEX FROM `schema_migrations`
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'schema_migrations') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  DESCRIBE `users`
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSHOW INDEX FROM `users`[0m
+  [1m[35mSequel::Mysql2::Database (0.9ms)[0m  SELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'users') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT NULL AS `nil` FROM `schema_migrations` LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `schema_migrations` LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT `filename` FROM `schema_migrations` ORDER BY `filename`[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `schema_migrations`
+  [1m[36mSequel::Mysql2::Database (2.8ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (1.7ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+Started GET "/" for 127.0.0.1 at 2019-01-12 20:36:01 -0800
+Started GET "/index" for 127.0.0.1 at 2019-01-12 20:36:01 -0800
+  [1m[35mSequel::Mysql2::Database (6.2ms)[0m  DESCRIBE `runs`
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT version()[0m
+  [1m[35mSequel::Mysql2::Database (2.8ms)[0m  DESCRIBE `users`
+  [1m[36mSequel::Mysql2::Database (1.1ms)[0m  [1mDESCRIBE `orders`[0m
+  [1m[35mSequel::Mysql2::Database (1.1ms)[0m  DESCRIBE `comments`
+Processing by MainController#index as HTML
+  [1m[36mSequel::Mysql2::Database (2.9ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+Redirected to http://localhost:3000/login?redirect=/index
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 15ms (Models: 2.9ms)
+
+
+Started GET "/login?redirect=/index" for 127.0.0.1 at 2019-01-12 20:36:01 -0800
+Processing by MainController#login as HTML
+  Parameters: {"redirect"=>"/index"}
+  Rendering main/login.html.erb within layouts/application
+  Rendered main/login.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 467ms (Views: 461.6ms | Models: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2019-01-12 20:36:03 -0800
+Processing by MainController#register as HTML
+  Rendering main/register.html.erb within layouts/application
+  Rendered main/register.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 27ms (Views: 25.8ms | Models: 0.0ms)
+
+
+Started POST "/register" for 127.0.0.1 at 2019-01-12 20:36:11 -0800
+Processing by MainController#register_post as HTML
+  Parameters: {"email"=>"andrew@Raftesalo.net", "phone_number"=>"9257255250", "first_name"=>"a", "last_name"=>"a", "password"=>"[FILTERED]", "password2"=>"[FILTERED]", "authenticity_token"=>"63w31lsdxjcmWKZTm+E+2cByz2UqMurBGE9MzRscDIBwYXspdtw1toIVEe82q1WRr9HjKA7MNEr9UU0eGIlLJg=="}
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `users` WHERE (`email` = 'andrew@Raftesalo.net') LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSequel::Mysql2::Database (4.0ms)[0m  INSERT INTO `users` (`email`, `first_name`, `last_name`, `is_verified`, `phone_number`, `credits`, `rating_score`, `rating_count`, `activation_code`, `salt`, `password`) VALUES ('andrew@Raftesalo.net', 'a', 'a', 0, '9257255250', 1000, 0, 0, 1890, 'XKiWn9uOzW1loY4kqU9x9cj5rbrmKVOt', '56xbDeJlCAjY00sZxdiXItOVaEVxLN/O\n')
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (15.4ms)[0m  COMMIT
+No template found for MainController#register_post, rendering head :no_content
+Completed 204 No Content in 676ms (Models: 20.5ms)
+
+
+Started GET "/activation" for 127.0.0.1 at 2019-01-12 20:36:25 -0800
+Processing by MainController#activation as HTML
+  Rendering main/activation.html.erb within layouts/application
+  Rendered main/activation.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 18ms (Views: 16.7ms | Models: 0.0ms)
+
+
+Started POST "/activation?redirect=" for 127.0.0.1 at 2019-01-12 20:36:38 -0800
+Processing by MainController#activation_post as HTML
+  Parameters: {"email"=>"andrew@Raftesalo.net", "activation"=>"1890", "authenticity_token"=>"+Q0MoyJVGtwwzuWPYhONALNHkNaIEDTJQT8FbYIgKcFiEEBcD5TpXZSDUjPPWeZI3OS8m6zu6kKkIQS+gbVuZw==", "redirect"=>""}
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `users` WHERE (`email` = 'andrew@Raftesalo.net') LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  BEGIN
+  [1m[36mSequel::Mysql2::Database (25.4ms)[0m  [1mUPDATE `users` SET `is_verified` = 1 WHERE (`id` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (13.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/login
+Completed 302 Found in 43ms (Models: 39.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-01-12 20:36:38 -0800
+Processing by MainController#login as HTML
+  Rendering main/login.html.erb within layouts/application
+  Rendered main/login.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 24ms (Views: 20.6ms | Models: 0.0ms)
+
+
+Started POST "/login?redirect=/" for 127.0.0.1 at 2019-01-12 20:36:42 -0800
+Processing by MainController#login_post as HTML
+  Parameters: {"email"=>"andrew@Raftesalo.net", "password"=>"[FILTERED]", "authenticity_token"=>"ZCZ+boHwNBkKtqFY3wL6UjH6o+akUJf+B7Dl38shwlj/OzKRrDHHmK77FuRySJEaXlmPq4CuSXXiruQMyLSF/g==", "redirect"=>"/"}
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `users` WHERE (`email` = 'andrew@Raftesalo.net') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (Models: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-12 20:36:42 -0800
+Started GET "/index" for 127.0.0.1 at 2019-01-12 20:36:42 -0800
+Processing by MainController#index as HTML
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (7.5ms)[0m  [1mSELECT count(*) AS `count` FROM `runs` WHERE (`status` = 0) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (1.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  Rendered main/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_header.html.erb (4.8ms)
+Completed 200 OK in 49ms (Views: 34.2ms | Models: 9.7ms)
+
+
+Started GET "/runs/new" for 127.0.0.1 at 2019-01-12 20:36:45 -0800
+Processing by MainController#new_run as HTML
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  Rendering main/new_run.html.erb within layouts/application
+  Rendered main/new_run.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 38ms (Views: 35.4ms | Models: 0.5ms)
+
+
+Started GET "/runs/new" for 127.0.0.1 at 2019-01-12 20:37:04 -0800
+Processing by MainController#new_run as HTML
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  Rendering main/new_run.html.erb within layouts/application
+  Rendered main/new_run.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 22ms (Views: 17.1ms | Models: 0.5ms)
+
+
+Started POST "/runs" for 127.0.0.1 at 2019-01-12 20:37:13 -0800
+Processing by MainController#new_run_post as HTML
+  Parameters: {"authenticity_token"=>"tcr8mMz0H8yLHT3M93GQ72WUlZC5H0k0EGsmWc0g+pIu17Bn4TXsTS9QinBaO/unCje53Z3hl7/1dSeKzrW9NA==", "business_id"=>"ChIJa7BDtNgU6YARWmFmckjIabY", "pickup_addr"=>"", "delivery_method"=>"1", "max_orders"=>"", "date"=>"", "time"=>"", "notes"=>""}
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+Completed 500 Internal Server Error in 2ms (Models: 0.5ms)
+
+
+  
+ArgumentError (invalid strptime format - `%m/%d/%Y %l:%M %p'):
+  
+app/controllers/main_controller.rb:106:in `new_run_post'
+Started POST "/runs" for 127.0.0.1 at 2019-01-12 20:37:21 -0800
+Processing by MainController#new_run_post as HTML
+  Parameters: {"authenticity_token"=>"tcr8mMz0H8yLHT3M93GQ72WUlZC5H0k0EGsmWc0g+pIu17Bn4TXsTS9QinBaO/unCje53Z3hl7/1dSeKzrW9NA==", "business_id"=>"ChIJa7BDtNgU6YARWmFmckjIabY", "pickup_addr"=>"", "delivery_method"=>"1", "max_orders"=>"", "date"=>"01/19/2019", "time"=>"8:38 PM", "notes"=>""}
+  [1m[35mSequel::Mysql2::Database (1.8ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSequel::Mysql2::Database (4.7ms)[0m  INSERT INTO `runs` (`runner_id`, `business_id`, `datetime`, `order_cap`, `status`, `delivery_method`, `pickup_addr`, `notes`) VALUES (1, 'ChIJa7BDtNgU6YARWmFmckjIabY', '2019-01-19 20:38:00', NULL, 0, 1, '', '')
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 12ms (Models: 7.7ms)
+
+
+  
+Sequel::NotNullConstraintViolation (Mysql2::Error: Column 'order_cap' cannot be null):
+  
+app/controllers/main_controller.rb:113:in `new_run_post'
+Started POST "/runs" for 127.0.0.1 at 2019-01-12 20:37:27 -0800
+Processing by MainController#new_run_post as HTML
+  Parameters: {"authenticity_token"=>"tcr8mMz0H8yLHT3M93GQ72WUlZC5H0k0EGsmWc0g+pIu17Bn4TXsTS9QinBaO/unCje53Z3hl7/1dSeKzrW9NA==", "business_id"=>"ChIJa7BDtNgU6YARWmFmckjIabY", "pickup_addr"=>"asdf", "delivery_method"=>"1", "max_orders"=>"2", "date"=>"01/19/2019", "time"=>"8:38 PM", "notes"=>""}
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSequel::Mysql2::Database (2.9ms)[0m  INSERT INTO `runs` (`runner_id`, `business_id`, `datetime`, `order_cap`, `status`, `delivery_method`, `pickup_addr`, `notes`) VALUES (1, 'ChIJa7BDtNgU6YARWmFmckjIabY', '2019-01-19 20:38:00', 2, 0, 1, 'asdf', '')
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (1.1ms)[0m  COMMIT
+No template found for MainController#new_run_post, rendering head :no_content
+Completed 204 No Content in 34ms (Models: 4.7ms)
+
+
+Started POST "/runs" for 127.0.0.1 at 2019-01-12 20:37:28 -0800
+Processing by MainController#new_run_post as HTML
+  Parameters: {"authenticity_token"=>"tcr8mMz0H8yLHT3M93GQ72WUlZC5H0k0EGsmWc0g+pIu17Bn4TXsTS9QinBaO/unCje53Z3hl7/1dSeKzrW9NA==", "business_id"=>"ChIJa7BDtNgU6YARWmFmckjIabY", "pickup_addr"=>"asdf", "delivery_method"=>"1", "max_orders"=>"2", "date"=>"01/19/2019", "time"=>"8:38 PM", "notes"=>""}
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  BEGIN
+  [1m[36mSequel::Mysql2::Database (0.8ms)[0m  [1mINSERT INTO `runs` (`runner_id`, `business_id`, `datetime`, `order_cap`, `status`, `delivery_method`, `pickup_addr`, `notes`) VALUES (1, 'ChIJa7BDtNgU6YARWmFmckjIabY', '2019-01-19 20:38:00', 2, 0, 1, 'asdf', '')[0m
+  [1m[35mSequel::Mysql2::Database (0.8ms)[0m  SELECT * FROM `runs` WHERE `id` = 2
+  [1m[36mSequel::Mysql2::Database (1.0ms)[0m  [1mCOMMIT[0m
+No template found for MainController#new_run_post, rendering head :no_content
+Completed 204 No Content in 34ms (Models: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-12 20:37:30 -0800
+Started GET "/index" for 127.0.0.1 at 2019-01-12 20:37:30 -0800
+Processing by MainController#index as HTML
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT count(*) AS `count` FROM `runs` WHERE (`status` = 0) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 2) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 2) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  Rendered main/index.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 42ms (Views: 32.4ms | Models: 5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-12 20:39:57 -0800
+Started GET "/index" for 127.0.0.1 at 2019-01-12 20:39:57 -0800
+Processing by MainController#index as HTML
+  [1m[35mSequel::Mysql2::Database (61.7ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  Rendering main/index.html.erb within layouts/application
+  [1m[36mSequel::Mysql2::Database (13.4ms)[0m  [1mSELECT count(*) AS `count` FROM `runs` WHERE (`status` = 0) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 2) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 2) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (1.2ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  Rendered main/index.html.erb within layouts/application (41.5ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 234ms (Views: 149.4ms | Models: 79.7ms)
+
+
+Started GET "/runs/new" for 127.0.0.1 at 2019-01-12 20:41:20 -0800
+Processing by MainController#new_run as HTML
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  Rendering main/new_run.html.erb within layouts/application
+  Rendered main/new_run.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 33ms (Views: 29.1ms | Models: 0.4ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2019-01-12 20:42:05 -0800
+Processing by MainController#index as HTML
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  Rendering main/index.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT count(*) AS `count` FROM `runs` WHERE (`status` = 0) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 2) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 1) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 2) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  Rendered main/index.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_header.html.erb (4.5ms)
+Completed 200 OK in 53ms (Views: 46.7ms | Models: 5.1ms)
+
+
+Started GET "/runs/new" for 127.0.0.1 at 2019-01-12 20:42:07 -0800
+Processing by MainController#new_run as HTML
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  Rendering main/new_run.html.erb within layouts/application
+  Rendered main/new_run.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 29ms (Views: 26.5ms | Models: 0.3ms)
+
+
