@@ -87,7 +87,24 @@ class MainController < ApplicationController
     user.save_changes
     redirect_to "/login"
   end
-
+  def new_run_post
+    render(plain: "No location selected") and return if params[:business_id].nil?
+    render(plain: "Max Orders not set") and return if params[:max_orders].nil?
+    render(plain: "Date not set") and return if params[:date].nil?
+    render(plain: "Time not set") and return if params[:time].nil?
+    render(plain: "No pickup address set") and return if params[:delivery_method] == "pickup" && params[:address].nil?
+    
+    run = Run.new(:runner_id => @user.id, 
+                  :business_id => params[:business_id], 
+                  :datetime => Time.parse(params[:date]+" "+params[:time]), 
+                  :order_cap => params[:max_orders], 
+                  :status => 0, 
+                  :delivery_method => params[:delivery_method], 
+                  :pickup_addr => params[:address], 
+                  :notes => params[:notes])
+    p run
+    
+  end
   private
 
 
