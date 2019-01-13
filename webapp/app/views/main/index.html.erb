@@ -5,45 +5,45 @@
         <h2>Active Boba Runs</h2>
 
         <% if (Run.where(status: 1).count > 0) %>
-        <% Run.where(status: 1).limit(4).each do |run| %>
-        <div class="card btn" type="button" style="width: 20rem;" data-toggle="modal" data-target="#exampleModal">
-          <div class="card-body container">
-            <div class="row  ">
-              <div class="col-4 no-gutters align-items-center">
-                <%if File.exist?("./public/uploads/users/#{run.runner_id}/user_avatar.png") %>
-                <img class="img-thumbnail"  src="../uploads/users/<%= run.runner_id %>/user_avatar.png">
-                <%else %>
-                <img class="img-thumbnail" src="/img/avatar_placeholder.png">
-                <%end %>
-              </div>
-              <div class="col-7">
-                <div class="row">
-                  <div class="col-6">
-                    <div class="row">
-                      <h5 class="card_title">run.bussiness_id</h5>
-                    </div>
-                    <div class="row mt-1">
-                      <i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i
-                      class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i
-                      class="fa fa-star checked"></i>
-                    </div>
+          <% Run.where(status: 1).limit(4).each do |run| %>
+            <div class="card btn" type="button" style="width: 20rem;" data-toggle="modal" data-target="#exampleModal">
+              <div class="card-body container">
+                <div class="row  ">
+                  <div class="col-4 no-gutters align-items-center">
+                    <%if File.exist?("./public/uploads/users/#{run.runner_id}/user_avatar.png") %>
+                      <img class="img-thumbnail"  src="../uploads/users/<%= run.runner_id %>/user_avatar.png">
+                    <%else %>
+                      <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+                    <%end %>
                   </div>
-                  <div class="col-6">
-                    <div class="row ml-1">
-                      <h5 class="mb-3 ml-5"><%= Order.where(run_id: run.id).count.to_s + '/' + run.order_cap.to_s %></h5>
-                    </div>
-                    <div class="row ml-5 ">
-                      <h6 class="card-subutitle mb-1 text-muted "><%= '%02d' % ((run.datetime - Time.now)/60/60) %></h6>
+                  <div class="col-7">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="row">
+                          <h5 class="card_title">run.bussiness_id</h5>
+                        </div>
+                        <div class="row mt-1">
+                          <i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i
+                          class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i
+                          class="fa fa-star checked"></i>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="row ml-1">
+                          <h5 class="mb-3 ml-5"><%= Order.where(run_id: run.id).count.to_s + '/' + run.order_cap.to_s %></h5>
+                        </div>
+                        <div class="row ml-5 ">
+                          <h6 class="card-subutitle mb-1 text-muted "><%= '%02d' % ((run.datetime - Time.now)/60/60) %></h6>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <% end %>
+          <% end %>
         <% else %>
-        <h4>No Active Runs</h4>
+          <h4>No Active Runs</h4>
         <% end %>
 
         <p></p>
@@ -56,32 +56,28 @@
       <div class="col-6">
         <h2>My Current Active Orders</h2>
         <% Order.where(status: 1).limit(6).each do |order| %>
-        <div class="card btn" type="button" style="width: 20rem;" data-toggle="modal" data-target="#"+order.id>
-          <div class="card-body container">
-            <div class="row align-items-center">
-              <div class="col-4 no-gutters align-items-center">
-                <%if File.exist?("./public/uploads/users/#{Run[order.run_id].runner_id}/user_avatar.png") %>
-                <img class="img-thumbnail"  src="../uploads/users/<%= Run[order.run_id].runner_id %>/user_avatar.png">
-                <%else %>
-                <img class="img-thumbnail" src="/img/avatar_placeholder.png">
-                <%end %>
-              </div>
-              <div class="col-7">
-                <div class="row">
-                  <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].business_id %></h5>
+          <div class="card btn" type="button" style="width: 20rem;" data-toggle="modal" data-target="#"+order.id>
+            <div class="card-body container">
+              <div class="row align-items-center">
+                <div class="col-4 no-gutters align-items-center">
+                  <img src=User.where(id: Run[order.run_id]runner_id).filename alt="..." class="img-thumbnail">
+                </div>
+                <div class="col-7">
                   <div class="row">
-                    <div class="col-5">
-                      <p class="card-text">Run[id: order.run_id].bussiness_id</p>
-                    </div>
-                    <div class="col-5">
-                      <p class="card-text">order.cost</p>
+                    <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].business_id %></h5>
+                    <div class="row">
+                      <div class="col-5">
+                        <p class="card-text">Run[id: order.run_id].bussiness_id</p>
+                      </div>
+                      <div class="col-5">
+                        <p class="card-text">order.cost</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
         <% end %>
       </div>
     </div>
@@ -89,72 +85,165 @@
 </div>
 
 <% Run.where(status: 1).limit(4).each do |run| %>
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">"Name" is offering "X" on "Y"</h5> <!--TODO-->
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#orderFormContainer" aria-expanded="true" aria-controls="orderFormContainer">
-          Button
-        </button>
-        <div class="collapse" id="orderFormContainer">
-          <div class="card card-body">
-            <div class="container">
-              <form action="/orders/new" method="POST">
-                <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-                <input name="run_id" type="hidden" value=<%= run.id %>>
-                <div class="form-row">
-                  <label class="col-12">Order:</label>
-                </div>
-                <div class="form-row">
-                  <input name="order_desc" type="text" class="form-control col-12"></input>
-                </div>
-                <div class="form-row">
-                  <button type="submit" class="btn btn-primary">Submit Order</button>
+  <div class="modal fade" id="Run_Modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
 
-                </div>
-              </form>
+      <div class="modal-content modal-lg">
+
+        <div class="modal-header">
+
+          <!--contains pfp followed by a few other things -->
+          <%if File.exist?("./public/uploads/users/#{run.runner_id}/user_avatar.png") %>
+            <img class="img-thumbnail"  src="../uploads/users/<%= run.runner_id %>/user_avatar.png">
+          <%else %>
+            <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+          <%end %>
+
+          <h5 class="modal-title" id="exampleModalLabel">
+            Users[run.runner_id].first_name + " is delivering " + get_business_id run.business_id + " to " + run.pickup_addr
+          </h5>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <!--contents of of the "middle part" of the modal-->
+        <div class="modal-body">
+
+          <!--Holds the core request information-->
+          <div class="container">
+            <div class="row text-center">
+              <div class="col">
+                <dl class="row">
+                  <dt class="col-sm-3">Who: </dt>
+                  <dd class="col-sm-9"><%=Users[run.runner_id].first_name + " " + Users[run.runner_id].last_name%></dd>
+
+                  <dt class="col-sm-3">Where: </dt>
+                  <dd class="col-sm-9"><%=run.pickup_addr%></dd>
+
+                  <dt class="col-sm-3">When: </dt>
+                  <dd class="col-sm-9"><%=run.datetime.strftime("%I:%M")%></dd>
+
+                  <dt class="col-sm-3">Delivery Method: </dt>
+                  <% if run.delivery_method ==0 %>
+                    <dd class="col-sm-9">
+                      <p>Pickup</p>
+                      <p><%=run.Address%></p>
+                    </dd>
+                  <%else%>
+                    <dd class="col-sm-9">Delivery</dd>
+                  <%end%>
+                </dl>
+              </div>
+              <div class="col">
+                <dl class="row">
+                  <dt class="col-sm-3">What: </dt>
+                  <dd class="col-sm-9"><%= get_business_name run.business_id %></dd>
+
+                  <dt class="col-sm-3">People Registered:</dt>
+                  <dd class="col-sm-9"><%= Order.where(run_id: run.run_id).count + "/" + run.order_cap%></dd>
+                                           <p></p>
+              <p></p>
+                                           <dt class="col-sm-3">Special Notes:</dt>
+              <dd class="col-sm-9"><% Run.notes %></dd>
+                </dl>
+              </div>
             </div>
           </div>
+
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Button
+          </button>
+
+          <!--collapsed div-->
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              ...
+              <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" >Submit Order</button>
+            </div>
+          </div>
+
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 <% end %>
 
 <% Order.where(status: 1).limit(6).each do |order| %>
-<div class="modal fade" id="orderID" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"><%= get_business_name Run[order.run_id].business_id.to_s + "delivery" %></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-4">
-            order.order_desc
-          </div>
-          <div class="col-4">
-            order.cost
+  <div class="modal fade" id="order_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+
+      <div class="modal-content modal-lg">
+
+        <div class="modal-header">
+
+          <!--contains pfp followed by a few other things -->
+          <%if File.exist?("./public/uploads/users/#{run.runner_id}/user_avatar.png") %>
+            <img class="img-thumbnail"  src="../uploads/users/<%= run.runner_id %>/user_avatar.png">
+          <%else %>
+            <img class="img-thumbnail" src="/img/avatar_placeholder.png">
+          <%end %>
+
+          <h5 class="modal-title" id="OrderModalLabel">
+            <%= "You have one order from " + Users[order.user_id] + ", it is currently in " + Run.STATUS_MAP[Runs[orders.run_id].status] +"." %>
+          </h5>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <!--contents of of the "middle part" of the modal-->
+        <div class="modal-body">
+
+          <!--Holds the core request information-->
+          <div class="container">
+            <div class="row text-center">
+              <div class="col">
+                <dl class="row">
+                  <dt class="col-sm-3">Cost: </dt>
+                  <dd class="col-sm-9"><%=order.cost.to_s%></dd>
+
+            <dt class="col-sm-3">Where: </dt>
+                  <dd class="col-sm-9"><%=Run[order.run_id].pickup_addr%></dd>
+
+                  <dt class="col-sm-3">When: </dt>
+                  <dd class="col-sm-9"><%=Run[order.run_id].datetime.strftime("%I:%M")%></dd>
+
+                  <dt class="col-sm-3">Delivery Method: </dt>
+                  <% if run.delivery_method ==0 %>
+                    <dd class="col-sm-9">
+                      <p>Pickup</p>
+                      <p><%=run.Address%></p>
+                    </dd>
+                  <%else%>
+                    <dd class="col-sm-9">Delivery</dd>
+                  <%end%>
+                </dl>
+              </div>
+              <div class="col">
+                <dl class="row">
+                  <dt class="col-sm-3">What: </dt>
+                  <dd class="col-sm-9"><%= get_business_name Runs[order.runner_id].business_id %></dd>
+                  <p></p>
+                  <p></p>
+                  <dt class="col-sm-3">Special Notes:</dt>
+                  <dd class="col-sm-9"><% order.notes %></dd>
+                </dl>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 <% end %>
