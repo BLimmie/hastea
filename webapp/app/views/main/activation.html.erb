@@ -1,3 +1,13 @@
+<% if @alert %>
+  <div class="alert alert-danger">
+    <a class="close" data-dismiss="alert" href="#">×</a><%= @alert %>
+  </div>
+<% end %>
+<% if @notice %>
+  <div class="alert alert-info">
+    <a class="close" data-dismiss="alert" href="#">×</a><%= @notice %>
+  </div>
+<% end %>
 <div class="bg-full bg-login">
   <div class="container text-center text-light">
     <form class="form-signin" action="?redirect=<%= @redirect %>" method="POST" accept-charset="UTF-8">

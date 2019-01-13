@@ -73,7 +73,7 @@ class MainController < ApplicationController
         body: text_body
       })
     @notice = "We've got your account, but need you to verify your phone number!"
-
+    redirect_to "/activation"
   end
   def activation_post
     render(plain: "Missing email") and return if params[:email].nil? || params[:email].empty?
