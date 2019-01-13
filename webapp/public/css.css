@@ -1,5 +1,10 @@
-
+.btn[type=submit] {
+  background-color: rgb(69,113,244)
+}
 .bg-full {
+  background-image: url("img/background.png");
+  /* background-position:0px -50px; */
+
   position: absolute;
   top: 0;
   bottom: 0;
@@ -15,7 +20,9 @@
 }
 
 .bg-login {
-  background-color: #1e617a;
+  /* background-color: #95a5a6; */
+  background-image: url("img/background.png");
+  background-position:0px -50px;
 }
 
 .bg-warn {

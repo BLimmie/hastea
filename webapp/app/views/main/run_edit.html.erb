@@ -2,57 +2,18 @@
 <div class="container nav-sep">
   <h2>Mark Boba as Picked Up:</h2>
   <hr>
-  <form action="POST">
+  <form method="POST" action="/run_update" enctype="multipart/form-data">
   <div class="container">
-
-
-status - conditional
-
-
-        <form class="form-signin" action="" method="POST" enctype="multipart/form-data">
-          <div class="form-row">
-            <label class="col-6 mt-3 mb-0">First Name</label>
-            <label class="col-6 mt-3 mb-0">Last Name</label>
-          </div>
-          <div class="form-row">
-            <input class= "col-6 form-control" type="text" name="first_name" value="<%= @user.first_name %>"/>
-            <input class= "col-6 form-control" type="text" name="last_name" value="<%= @user.last_name %>"/>
-          </div>
-          <div class="form-row">
-            <label class="mt-3 mb-0">E-mail</label>
-          </div>
-          <div class="form-row">
-            <input class= "form-control" type="text" name="email" value="<%= @user.email %>"/>
-          </div>
-          <div class="form-row">
-            <label class="mt-3 mb-0">Phone Number</label><br>
-          </div>
-          <div class="form-row">
-            <input class= "form-control" type="number" name="phone_number" value="<%= @user.phone_number %>"/>
-          </div>
-          <div class="form-row">
-            <label class="mt-3 mb-0">Change Password</label>
-          </div>
-          <div class="form-row">
-            <input class= "form-control" type="password" name="password" />
-          </div>
-          <div class="form-row">
-            <label class="mt-3 mb-0">Verify Password</label>
-          </div>
-          <div class="form-row">
-            <input class= "form-control" type="password" name="password2" />
-          </div>
-          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-          <div class="form-row">
-            <input type="file" id="avatar_input" style="display: none;" name="avatar" accept="image/*">
-          </div>
-          <div class="form-row">
-            <label class="mx-auto btn btn-primary btn-medium mt-2">
-            <input type="submit" class="btn btn-primary" value="Save"
-                onclick="return verifyPasswordMatch(this.parentElement.parentElement);" />
-            </label>
-          </div>
-        </form>
-      </div>
+    <div class="row">
+      <label class="col-6" > Picture of Drinks </label>
+      <label class="col-6" > Picture of Receipt </label>
     </div>
+    <div class="row">
+      <input name = "drinks" type="file" class="col-6" > Picture of Drinks </label>
+      <input name = "receipt" type="file" class="col-6" > Picture of Receipt </label>
+    </div>
+    <div class="row">
+      <btn type="submit">Save</btn>
+    </div>
+  </div>
 </div>
