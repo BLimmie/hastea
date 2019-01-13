@@ -226,14 +226,14 @@
         <div class="modal-header">
 
           <!--contains pfp followed by a few other things -->
-          <%if File.exist?("./public/uploads/users/#{run.runner_id}/user_avatar.png") %>
-            <img class="img-thumbnail"  src="../uploads/users/<%= run.runner_id %>/user_avatar.png">
+          <%if File.exist?("./public/uploads/users/#{order.user_id}/user_avatar.png") %>
+            <img class="img-thumbnail"  src="../uploads/users/<%= order.user_id %>/user_avatar.png">
           <%else %>
             <img class="img-thumbnail" src="/img/avatar_placeholder.png">
           <%end %>
 
           <h5 class="modal-title" id="OrderModalLabel">
-            <%= "You have one order from " + Users[order.user_id] + ", it is currently in " + Run.STATUS_MAP[Runs[orders.run_id].status] +"." %>
+            <%= "You have one order from " + User[order.user_id].first_name + ", it is currently in " + Run::RUN_STATUS[Run[order.run_id].status] +"." %>
           </h5>
 
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -259,7 +259,7 @@
                   <dd class="col-sm-9"><%=Run[order.run_id].datetime.strftime("%I:%M")%></dd>
 
                   <dt class="col-sm-3">Delivery Method: </dt>
-                  <% if run.delivery_method ==0 %>
+                  <% if Run[order.run_id].delivery_method ==0 %>
                     <dd class="col-sm-9">
                       <p>Pickup</p>
                       <p><%=run.Address%></p>
@@ -272,11 +272,11 @@
               <div class="col">
                 <dl class="row">
                   <dt class="col-sm-3">What: </dt>
-                  <dd class="col-sm-9"><%= get_business_name Runs[order.runner_id].business_id %></dd>
+                  <dd class="col-sm-9"><%= get_business_name Run[order.run_id].business_id %></dd>
                   <p></p>
                   <p></p>
                   <dt class="col-sm-3">Special Notes:</dt>
-                  <dd class="col-sm-9"><% order.notes %></dd>
+                  <dd class="col-sm-9"><% order.order_desc %></dd>
                 </dl>
               </div>
             </div>
