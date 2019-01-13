@@ -1965,3 +1965,276 @@ Processing by MainController#index as HTML
 Completed 200 OK in 1521ms (Views: 1502.2ms | Models: 16.4ms)
 
 
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+Started GET "/" for 127.0.0.1 at 2019-01-13 04:04:32 -0800
+Started GET "/index" for 127.0.0.1 at 2019-01-13 04:04:32 -0800
+  [1m[35mSequel::Mysql2::Database (1.4ms)[0m  DESCRIBE `runs`
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT version()[0m
+  [1m[35mSequel::Mysql2::Database (1.0ms)[0m  DESCRIBE `users`
+  [1m[36mSequel::Mysql2::Database (1.3ms)[0m  [1mDESCRIBE `orders`[0m
+  [1m[35mSequel::Mysql2::Database (1.0ms)[0m  DESCRIBE `comments`
+Processing by MainController#index as HTML
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  Rendering main/index.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT count(*) AS `count` FROM `runs` WHERE (`status` = 0) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.8ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 2) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 3) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 2[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `runs` WHERE `id` = 2
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 2) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT 1 AS `one` FROM `orders` WHERE ((`run_id` = 2) AND (`user_id` = 1)) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `comments` WHERE (`run_id` = 2) ORDER BY `id`[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 3) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT 1 AS `one` FROM `orders` WHERE ((`run_id` = 3) AND (`user_id` = 1)) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `comments` WHERE (`run_id` = 3) ORDER BY `id`
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 2[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `runs` WHERE `id` = 2
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 2[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `runs` WHERE `id` = 2
+  Rendered main/index.html.erb within layouts/application (1475.8ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 1715ms (Views: 1682.4ms | Models: 17.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-01-13 04:04:36 -0800
+Processing by MainController#logout as HTML
+  [1m[36mSequel::Mysql2::Database (0.8ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+Redirected to http://localhost:3000/login
+Completed 302 Found in 5ms (Models: 0.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-01-13 04:04:36 -0800
+Processing by MainController#login as HTML
+  Rendering main/login.html.erb within layouts/application
+  Rendered main/login.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 55ms (Views: 51.9ms | Models: 0.0ms)
+
+
+Started POST "/login?redirect=/" for 127.0.0.1 at 2019-01-13 04:05:34 -0800
+Processing by MainController#login_post as HTML
+  Parameters: {"email"=>"brinsfield.cole@gmail.com", "password"=>"[FILTERED]", "authenticity_token"=>"hVGz9WXZ1i3Mmm60sJEvt36Cz2GrXSOO6JfLCNpS82215Y0EjkBULsVwz5YmVYlKgaAEAiC4pxc1zhzYREDofQ==", "redirect"=>"/"}
+  [1m[35mSequel::Mysql2::Database (0.8ms)[0m  SELECT * FROM `users` WHERE (`email` = 'brinsfield.cole@gmail.com') LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (Models: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-13 04:05:35 -0800
+Started GET "/index" for 127.0.0.1 at 2019-01-13 04:05:35 -0800
+Processing by MainController#index as HTML
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  Rendering main/index.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT count(*) AS `count` FROM `runs` WHERE (`status` = 0) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 2) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 3) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 2[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `runs` WHERE `id` = 2
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.8ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 2) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT 1 AS `one` FROM `orders` WHERE ((`run_id` = 2) AND (`user_id` = 1)) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `comments` WHERE (`run_id` = 2) ORDER BY `id`[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (1.3ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 3) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT 1 AS `one` FROM `orders` WHERE ((`run_id` = 3) AND (`user_id` = 1)) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `comments` WHERE (`run_id` = 3) ORDER BY `id`
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (1.7ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 2[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `runs` WHERE `id` = 2
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 2[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `runs` WHERE `id` = 2
+  Rendered main/index.html.erb within layouts/application (1563.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 1589ms (Views: 1565.1ms | Models: 19.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-13 04:05:47 -0800
+Started GET "/index" for 127.0.0.1 at 2019-01-13 04:05:47 -0800
+Processing by MainController#index as HTML
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  Rendering main/index.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT count(*) AS `count` FROM `runs` WHERE (`status` = 0) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 2) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 3) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 2[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `runs` WHERE `id` = 2
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.8ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 2) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT 1 AS `one` FROM `orders` WHERE ((`run_id` = 2) AND (`user_id` = 1)) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `comments` WHERE (`run_id` = 2) ORDER BY `id`[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 3) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT 1 AS `one` FROM `orders` WHERE ((`run_id` = 3) AND (`user_id` = 1)) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `comments` WHERE (`run_id` = 3) ORDER BY `id`
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 2[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `runs` WHERE `id` = 2
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 2[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `runs` WHERE `id` = 2
+  Rendered main/index.html.erb within layouts/application (1300.0ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 1351ms (Views: 1328.8ms | Models: 18.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-13 04:11:24 -0800
+Started GET "/index" for 127.0.0.1 at 2019-01-13 04:11:24 -0800
+Processing by MainController#index as HTML
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  Rendering main/index.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT count(*) AS `count` FROM `runs` WHERE (`status` = 0) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 2) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 3) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 2[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `runs` WHERE `id` = 2
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `runs` WHERE (`status` = 0) LIMIT 4[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 2) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT 1 AS `one` FROM `orders` WHERE ((`run_id` = 2) AND (`user_id` = 1)) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `comments` WHERE (`run_id` = 2) ORDER BY `id`[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT count(*) AS `count` FROM `orders` WHERE (`run_id` = 3) LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT 1 AS `one` FROM `orders` WHERE ((`run_id` = 3) AND (`user_id` = 1)) LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `comments` WHERE (`run_id` = 3) ORDER BY `id`
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `orders` WHERE (`status` = 1) LIMIT 6[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 2[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `runs` WHERE `id` = 2
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `runs` WHERE `id` = 2[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `runs` WHERE `id` = 2
+  Rendered main/index.html.erb within layouts/application (1785.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 1828ms (Views: 1810.5ms | Models: 14.9ms)
+
+
+Started GET "/runner_edit" for 127.0.0.1 at 2019-01-13 04:11:29 -0800
+Processing by MainController#runner_edit as HTML
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  Rendering main/runner_edit.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `runs` WHERE ((`runner_id` = 1) AND (`status` IN (0, 1, 2, 3, 4)))
+  [1m[36mSequel::Mysql2::Database (0.7ms)[0m  [1mSELECT * FROM `orders` WHERE (`run_id` = 2)[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `orders` WHERE (`run_id` = 3)
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  Rendered main/runner_edit.html.erb within layouts/application (286.6ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 325ms (Views: 317.4ms | Models: 4.7ms)
+
+
+Started GET "/runner_edit" for 127.0.0.1 at 2019-01-13 04:11:46 -0800
+Processing by MainController#runner_edit as HTML
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  Rendering main/runner_edit.html.erb within layouts/application
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT * FROM `runs` WHERE ((`runner_id` = 1) AND (`status` IN (0, 1, 2, 3, 4)))
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `orders` WHERE (`run_id` = 2)[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  [1m[36mSequel::Mysql2::Database (0.5ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.6ms)[0m  SELECT * FROM `orders` WHERE (`run_id` = 3)
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT * FROM `users` WHERE `id` = 1[0m
+  [1m[35mSequel::Mysql2::Database (0.7ms)[0m  SELECT * FROM `users` WHERE `id` = 1
+  Rendered main/runner_edit.html.erb within layouts/application (252.9ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 289ms (Views: 284.1ms | Models: 4.0ms)
+
+
+Started GET "/run_edit/2" for 127.0.0.1 at 2019-01-13 04:11:52 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/run_edit/2"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/run_edit/3" for 127.0.0.1 at 2019-01-13 04:11:55 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/run_edit/3"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
