@@ -14,7 +14,7 @@
         return new Promise(resolve => setTimeout(resolve, ms));
       }
       async function initialize() {
-        await sleep(250);
+        await sleep(1000);
         var ucsb = {lat:34.420870, lng:-119.698340};
         map = new google.maps.Map(document.getElementById('map'), {zoom:12, center:ucsb});
         infowindow = new google.maps.InfoWindow();
