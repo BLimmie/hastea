@@ -35494,3 +35494,48 @@ Processing by MainController#index as HTML
 Completed 200 OK in 24ms (Views: 21.4ms | Models: 1.1ms)
 
 
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSET NAMES utf8[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET @@wait_timeout = 2147483
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET SQL_AUTO_IS_NULL=0[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET NAMES utf8
+  [1m[36mSequel::Mysql2::Database (0.1ms)[0m  [1mSET @@wait_timeout = 2147483[0m
+  [1m[35mSequel::Mysql2::Database (0.1ms)[0m  SET SQL_AUTO_IS_NULL=0
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT version()[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT NULL AS `nil` FROM `schema_migrations` LIMIT 1
+  [1m[36mSequel::Mysql2::Database (32.8ms)[0m  [1mCREATE TABLE `schema_migrations` (`filename` varchar(255) PRIMARY KEY)[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT NULL AS `nil` FROM `schema_info` LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT `filename` FROM `schema_migrations` ORDER BY `filename`[0m
+  [1m[35mSequel::Mysql2::Database (42.3ms)[0m  CREATE TABLE `users` (`id` integer PRIMARY KEY AUTO_INCREMENT, `phone_number` varchar(255) NOT NULL UNIQUE, `email` varchar(255) NOT NULL UNIQUE, `is_verified` integer NOT NULL, `first_name` varchar(255) NOT NULL, `last_name` varchar(255) NOT NULL, `activation_code` integer NOT NULL, `credits` integer NOT NULL, `rating_score` integer NOT NULL, `rating_count` integer NOT NULL, `password` varchar(255) NOT NULL, `salt` varchar(255) NOT NULL)
+  [1m[36mSequel::Mysql2::Database (4.7ms)[0m  [1mINSERT INTO `schema_migrations` (`filename`) VALUES ('20190112070001_create_users.rb')[0m
+  [1m[35mSequel::Mysql2::Database (34.7ms)[0m  CREATE TABLE `runs` (`id` integer PRIMARY KEY AUTO_INCREMENT, `runner_id` integer NOT NULL, `business_id` varchar(255) NOT NULL, `datetime` datetime NOT NULL, `order_cap` integer NOT NULL, `status` integer NOT NULL, `delivery_method` integer NOT NULL, `pickup_addr` Text NOT NULL, `notes` Text)
+  [1m[36mSequel::Mysql2::Database (4.6ms)[0m  [1mINSERT INTO `schema_migrations` (`filename`) VALUES ('20190112072930_create_runs.rb')[0m
+  [1m[35mSequel::Mysql2::Database (40.2ms)[0m  CREATE TABLE `orders` (`id` integer PRIMARY KEY AUTO_INCREMENT, `run_id` integer, `user_id` integer, `order_desc` Text, `status` integer, `cost` integer)
+  [1m[36mSequel::Mysql2::Database (4.7ms)[0m  [1mINSERT INTO `schema_migrations` (`filename`) VALUES ('20190112113003_create_orders.rb')[0m
+  [1m[35mSequel::Mysql2::Database (31.7ms)[0m  CREATE TABLE `comments` (`id` integer PRIMARY KEY AUTO_INCREMENT, `run_id` integer, `author_id` integer, `content` Text)
+  [1m[36mSequel::Mysql2::Database (4.4ms)[0m  [1mINSERT INTO `schema_migrations` (`filename`) VALUES ('20190112224130_create_comments.rb')[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SHOW FULL TABLES
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT version()[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'comments') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mSELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'orders') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`[0m
+  [1m[35mSequel::Mysql2::Database (0.4ms)[0m  SELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'runs') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'schema_migrations') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`[0m
+  [1m[35mSequel::Mysql2::Database (0.5ms)[0m  SELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'users') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mDESCRIBE `comments`[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SHOW INDEX FROM `comments`
+  [1m[36mSequel::Mysql2::Database (0.6ms)[0m  [1mSELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'comments') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  DESCRIBE `orders`
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSHOW INDEX FROM `orders`[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'orders') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mDESCRIBE `runs`[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SHOW INDEX FROM `runs`
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'runs') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  DESCRIBE `schema_migrations`
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSHOW INDEX FROM `schema_migrations`[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'schema_migrations') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`
+  [1m[36mSequel::Mysql2::Database (0.4ms)[0m  [1mDESCRIBE `users`[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SHOW INDEX FROM `users`
+  [1m[36mSequel::Mysql2::Database (0.3ms)[0m  [1mSELECT `CONSTRAINT_NAME` AS `name`, `COLUMN_NAME` AS `column`, `REFERENCED_TABLE_NAME` AS `table`, `REFERENCED_COLUMN_NAME` AS `key` FROM `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE` WHERE ((`TABLE_NAME` = 'users') AND (`TABLE_SCHEMA` = DATABASE()) AND (`CONSTRAINT_NAME` != 'PRIMARY') AND (`REFERENCED_TABLE_NAME` IS NOT NULL)) ORDER BY `CONSTRAINT_NAME`, `POSITION_IN_UNIQUE_CONSTRAINT`[0m
+  [1m[35mSequel::Mysql2::Database (0.3ms)[0m  SELECT NULL AS `nil` FROM `schema_migrations` LIMIT 1
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `schema_migrations` LIMIT 1[0m
+  [1m[35mSequel::Mysql2::Database (0.2ms)[0m  SELECT `filename` FROM `schema_migrations` ORDER BY `filename`
+  [1m[36mSequel::Mysql2::Database (0.2ms)[0m  [1mSELECT * FROM `schema_migrations`[0m

@@ -19,12 +19,12 @@ Sequel.migration do
     create_table(:runs) do
       primary_key :id, :type=>"int(11)"
       column :runner_id, "int(11)", :null=>false
-      column :business_id, "int(11)", :null=>false
+      column :business_id, "varchar(255)", :null=>false
       column :datetime, "datetime", :null=>false
       column :order_cap, "int(11)", :null=>false
       column :status, "int(11)", :null=>false
       column :delivery_method, "int(11)", :null=>false
-      column :pickup_addr, "int(11)"
+      column :pickup_addr, "text", :null=>false
       column :notes, "text"
     end
     
