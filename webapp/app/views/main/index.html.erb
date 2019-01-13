@@ -105,14 +105,20 @@
         <div class="collapse" id="orderFormContainer">
           <div class="card card-body">
             <div class="container">
-              <div class="form-row">
-                <label class="col-4">Order:</label>
-              </div>
-              <div class="form-row">
-                <input name="order_desc" type="text" class="col-4"></input>
-              </div>
+              <form action="/orders/new" method="POST">
+                <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                <input name="run_id" type="hidden" value=<%= run.id %>>
+                <div class="form-row">
+                  <label class="col-12">Order:</label>
+                </div>
+                <div class="form-row">
+                  <input name="order_desc" type="text" class="form-control col-12"></input>
+                </div>
+                <div class="form-row">
+                  <button type="submit" class="btn btn-primary">Submit Order</button>
 
-              <button type="button" class="btn btn-primary">Submit Order</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>

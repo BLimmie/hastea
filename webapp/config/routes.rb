@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   post 'index' => 'main#index'
   get 'runs/new' => "main#new_run"
   get 'orders' => 'main#orders'
+  post 'orders/new' => 'main#new_order'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

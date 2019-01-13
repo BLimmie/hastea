@@ -58,7 +58,7 @@ class MainController < ApplicationController
                     :phone_number => params[:phone_number], :credits => 1000, :rating_score=>0,
                     :rating_count=>0, :activation_code=>activation)
     user.set_password(params[:password])
-    user.save
+    user.save_changes
     text_body = <<-EOS
     Hello,
 
@@ -86,6 +86,13 @@ class MainController < ApplicationController
     user.is_verified = 1
     user.save_changes
     redirect_to "/login"
+  end
+  def new_order
+    render(plain: "Missing order") and return if params[:order_desc].nil? || params[:order_desc].empty?
+    render(plain: "Missing run") and return if params[:run_id].nil?
+    order = Order.new(:run_id => params[:run_id], :user_id=>@user.id, :order_desc => params[:order_desc], :status => 1, :cost => 0)
+    order.save()
+    redirect_to "/index"
   end
 
   private
