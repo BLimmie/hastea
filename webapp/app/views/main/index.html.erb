@@ -20,7 +20,7 @@
                     <div class="row">
                       <div class="col-6">
                         <div class="row">
-                          <h5 class="card_title"><%=get_business_name(run.business_id)%></h5>
+                          <h5 class="card_title"><%= get_business_name(run.business_id) %></h5>
                         </div>
                         <div class="row mt-1">
                           <i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i
@@ -282,7 +282,7 @@
                   <% if (Run[order.run_id].delivery_method == 0) %>
                     <dd class="col-sm-9">
                       <p>Pickup</p>
-                      <p><%=run.Address%></p>
+                      <p><%=Run[order.run_id].pickup_addr%></p>
                     </dd>
                   <%else%>
                     <dd class="col-sm-9">Delivery</dd>

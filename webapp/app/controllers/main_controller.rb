@@ -90,7 +90,7 @@ class MainController < ApplicationController
   def new_order
     render(plain: "Missing order") and return if params[:order_desc].nil? || params[:order_desc].empty?
     render(plain: "Missing run") and return if params[:run_id].nil?
-    order = Order.new(:run_id => params[:run_id], :user_id=>@user.id, :order_desc => params[:order_desc], :status => 1, :cost => 0)
+    order = Order.new(:run_id => params[:run_id], :user_id=>@user.id, :order_desc => params[:order_desc], :status => 0, :cost => 0)
     order.save()
     redirect_to "/index"
   end
@@ -116,6 +116,25 @@ class MainController < ApplicationController
 
   def new_comment
     comment = Comment.new(:run_id => params[:run_id], :author_id => @user.id, :content => params[:content])
+    
+    if params[:announce] == '1'
+      client = Twilio::REST::Client.new
+      if comment.author_id == Run[comment.run_id].runner_id
+        Order.where(run_id: comment.run_id).each do |order|
+          client.messages.create({
+            from: Rails.application.credentials.twilio_phone_number,
+            to: '+1'+User[order.user_id].phone_number,
+            body: "Hastea Alert:\nRunner "+ User[order.user_id].first_name+" made a comment on a run you ordered from: "+comment.content
+          })
+        end
+      else
+        client.messages.create({
+          from: Rails.application.credentials.twilio_phone_number,
+          to: '+1'+User[Run[comment.run_id].runner_id].phone_number,
+          body: "Hastea Alert:\nOrderer "+ User[Run[comment.run_id].runner_id].first_name+" made a comment on your run: "+comment.content
+        })
+      end
+    end
     comment.save
     redirect_to "/index"
   end
@@ -146,5 +165,6 @@ class MainController < ApplicationController
 end
 def get_business_name (business_id)
   @client = GooglePlaces::Client.new(Rails.application.credentials.maps_api)
-  @client.spot(business_id).name
+  spot = @client.spot(business_id)
+  spot.name
 end

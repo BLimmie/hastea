@@ -16,5 +16,7 @@ Rails.application.routes.draw do
   get 'orders' => 'main#orders'
   post 'orders/new' => 'main#new_order'
   post 'new_comment' => 'main#new_comment'
+  get 'runner_edit' => 'main#runner_edit'
+  post 'runner_edit' => 'main#runner_edit'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
