@@ -34,7 +34,12 @@
 
 
               </ul>
+
               <ul class="navbar-nav float-right ml-auto">
+                <li class="nav-item float-right mr-3">
+                  <a class="nav-link" href="/runner_edit"><i class="fas fa-rocket"></i >  My Runs</a>
+
+                </li>
                 <li class="nav-item dropdown float-right">
                   <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     <%if File.exist?("./public/uploads/users/#{@user.id}/user_avatar.png") %>

@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row justify-content-between">
       <div class="col-6 align-items-center">
-        <h2>Active Boba Runs</h2>
+        <h2 style="color:white;">Active Boba Runs</h2>
 
         <% if (Run.where(status: 0).count > 0) %>
           <% Run.where(status: 0).limit(4).each do |run| %>
@@ -43,7 +43,7 @@
             </div>
           <% end %>
         <% else %>
-          <h4>No Active Runs</h4>
+          <h4 style="color:white;">No Active Runs</h4>
         <% end %>
 
         <p></p>
@@ -54,8 +54,8 @@
         </div>
       </div>
       <div class="col-6">
-        <h2>My Current Active Orders</h2>
-        <% Order.where(status: 1).limit(6).each do |order| %>
+        <h2 style="color:white;">My Current Active Orders</h2>
+        <% Order.where(user_id: @user.id, status: 1).limit(6).each do |order| %>
           <div class="card btn" type="button" style="width: 20rem;" data-toggle="modal" data-target=#order_modal<%=order.id%>>
             <div class="card-body container">
               <div class="row align-items-center">
@@ -66,22 +66,19 @@
                     <img class="img-thumbnail" src="/img/avatar_placeholder.png">
                   <%end %>
                 </div>
-                <div class="col-7">
-                  <div class="row">
-                    <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].business_id %></h5>
-                    <div class="row">
-                      <div class="col-5">
-                        <p class="card-text"><%= get_business_name(Run[order.run_id].business_id) %></p>
-                      </div>
-                      <div class="col-5">
-                        <p class="card-text"><%=order.cost%></p>
-                      </div>
-                    </div>
-                  </div>
+                <div class="col-5">
+                  <h5 class="card_title text-center"><%= get_business_name Run[order.run_id].business_id %></h5>
+                </div>
+                <div class="col-3">
+                  <p class="card-text">$<%=order.cost%></p>
                 </div>
               </div>
+              <% if Run[order.run_id].status == 1 %>
+                <btn class="btn btn-sm btn-primary btn-block" onclick="location.href='/close/<%=order.id%>'">Mark as Received</btn>
+              <% end %>
             </div>
           </div>
+        </div>
         <% end %>
       </div>
     </div>
@@ -237,7 +234,7 @@
 </div>
 <% end %>
 
-<% Order.where(status: 1).limit(6).each do |order| %>
+<% Order.where(user_id: @user.id, status: 1).limit(6).each do |order| %>
   <div class="modal fade" id=order_modal<%=order.id%> tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
 
