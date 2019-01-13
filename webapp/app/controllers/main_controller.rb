@@ -90,7 +90,7 @@ class MainController < ApplicationController
   def new_order
     render(plain: "Missing order") and return if params[:order_desc].nil? || params[:order_desc].empty?
     render(plain: "Missing run") and return if params[:run_id].nil?
-    order = Order.new(:run_id => params[:run_id], :user_id=>@user.id, :order_desc => params[:order_desc], :status => 1, :cost => 0)
+    order = Order.new(:run_id => params[:run_id], :user_id=>@user.id, :order_desc => params[:order_desc], :status => 0, :cost => 0)
     order.save()
     redirect_to "/index"
   end
@@ -120,9 +120,7 @@ class MainController < ApplicationController
     if params[:announce] == '1'
       client = Twilio::REST::Client.new
       if comment.author_id == Run[comment.run_id].runner_id
-        p "here"
         Order.where(run_id: comment.run_id).each do |order|
-          p order.user_id
           client.messages.create({
             from: Rails.application.credentials.twilio_phone_number,
             to: '+1'+User[order.user_id].phone_number,
@@ -167,5 +165,5 @@ class MainController < ApplicationController
 end
 def get_business_name (business_id)
   @client = GooglePlaces::Client.new(Rails.application.credentials.maps_api)
-  @client.spot(business_id).name
+  @client.spot(business_id)
 end
